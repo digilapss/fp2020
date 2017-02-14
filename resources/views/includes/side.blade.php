@@ -15,6 +15,14 @@
           <div class="title">Dashboard</div>
         </a>
       </li>
+      <li {{ Request::is('admin/general*') ? 'class=active' : '' }}>
+        <a href="{{ route('admin.general.index') }}">
+          <div class="icon">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+          </div>
+          <div class="title">General Information</div>
+        </a>
+      </li>
       <li {{ Request::is('admin/uevent*') ? 'class=active' : '' }}>
         <a href="{{ route('admin.uevent.index') }}">
           <div class="icon">
@@ -26,7 +34,7 @@
       <li {{ Request::is('admin/category*') ? 'class=active' : '' }}>
         <a href="{{ route('admin.category.index') }}">
           <div class="icon">
-            <i class="fa fa-comments" aria-hidden="true"></i>
+            <i class="fa fa-tags" aria-hidden="true"></i>
           </div>
           <div class="title">Document Category</div>
         </a>

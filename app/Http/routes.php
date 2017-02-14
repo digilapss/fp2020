@@ -162,5 +162,42 @@ Route::group([
 		'as' => 'admin.document.delete'
 	]);
 	//End Document Route
+
+	//General Route
+	Route::get('/general',[
+		'uses' => 'GeneralController@getIndex',
+		'as' => 'admin.general.index'
+	]);
+
+	Route::get('/general/create', [
+		'uses' => 'GeneralController@getCreate',
+		'as' => 'admin.general.create'
+	]);
+
+	Route::post('/general/create', [
+		'uses' => 'GeneralController@postCreate',
+		'as' => 'admin.general.post.create'
+	]);
+
+	Route::get('/general/view/{general_id}',[
+		'uses' => 'GeneralController@getSingle',
+		'as' => 'admin.general.view'
+	]);
+
+	Route::get('/general/edit/{general_id}',[
+		'uses' => 'GeneralController@getUpdate',
+		'as' => 'admin.general.edit'
+	]);
+
+	Route::post('/general/edit/update',[
+		'uses' => 'GeneralController@postUpdate',
+		'as' => 'admin.general.update'
+	]);
+
+	Route::get('/general/delete/{general_id}', [
+		'uses' => 'GeneralController@getDelete',
+		'as' => 'admin.general.delete'
+	]);
+	//End General Route
 	
 });
