@@ -11,11 +11,11 @@
 		<div class="col-md-12">
 		    <div class="card">
 		        <div class="card-header">
-					<h1>Upcoming Event</h1>
+					<h1>Document</h1>
 		       	</div>
 		       	<div class="card-body">
-		       		<a href="{{ route('admin.uevent.create') }}">
-		        		<button class="btn btn-primary">Add New Event</button>
+		       		<a href="{{ route('admin.document.create') }}">
+		        		<button class="btn btn-primary">Add New Document</button>
 		        	</a>
 
 		        </div>
@@ -33,33 +33,36 @@
 		        	<table class="datatable table table-striped primary" cellspacing="0" width="100%">
 					    <thead>
 					        <tr>
-					            <th>Title</th>
-					            <th>Date</th>
-					            <th>Place</th>
+					            <th>Name</th>
+					            <th>Category</th>
+					            <th>Uploaded at</th>
 					            <th>Description</th>
+					            <th>File</th>
 					            <th>Action</th>
 					        </tr>
 					    </thead>
 					    <tbody>
-					    @if(count($uevents) == 0)
+					    @if(count($documents) == 0)
 					    	<tr>
-					    		<td colspan="5"><center>No Event</center></td>
+					    		<td colspan="5"><center>No Document</center></td>
 					    	</tr>
 						@else
-							@foreach($uevents as $uevent)
+							@foreach($documents as $document)
 								<tr>
-									<td>{{ $uevent->title }}</td>
-									<td>{{ $uevent->date }}</td>
-									<td>{{ $uevent->place }}</td>
-									<td>{{ $uevent->body }}</td>
-									<td>
-										<a href="{{ route('admin.uevent.view', ['uevent_id' => $uevent->id]) }}" class="btn btn-xs btn-primary">
-											View
+									<td>{{ $document->name }}</td>
+									<td>{{ $document->category->name }}</td>
+									<td>{{ $document->updated_at}}</td>
+									<td>{{ $document->description }}</td>
+									<td>{{ $document->body }}
+										<a href="{{ asset("documents/$document->file") }}" class="btn btn-xs btn-success">
+											Download
 										</a>
-										<a href="{{ route('admin.uevent.edit', ['uevent_id' => $uevent->id]) }}" class="btn btn-xs btn-info">
+									</td>
+									<td>
+										<a href="{{ route('admin.document.edit', ['document_id' => $document->id]) }}" class="btn btn-xs btn-info">
 											Edit
 										</a>
-										<a href="{{ route('admin.uevent.delete', ['uevent_id' => $uevent->id]) }}" class="btn btn-xs btn-danger">
+										<a href="{{ route('admin.document.delete', ['document_id' => $document->id]) }}" class="btn btn-xs btn-danger">
 											Delete
 										</a>
 									</td>
