@@ -34,6 +34,15 @@ class GeneralController extends Controller
 		return redirect()->route('admin.general.index')->with(['success' => 'General Information succesfully created!']);
 	}
 
+	public function getView($general_id)
+	{
+		$generals = General::find($general_id);
+		if(!$generals){
+			return redirect()->route('admin.general.index')->with(['fail' => 'General Information not Found!']);
+		}
+		return view('admin.general.view', ['generals' => $generals]);
+	}
+
 	public function getUpdate($general_id)
 	{
 		$generals = General::find($general_id);
@@ -55,7 +64,8 @@ class GeneralController extends Controller
 		$generals->body = $request['body'];
 		$generals->update();
 
-		return redirect()->route('admin.general.index')->with(['success' => 'General Information succesfully updated']); 
+		return redirect()->route('admin.general.view', ['general_id' => $request['general_id']])->with(['success' =>  $request['title']. 
+			' succesfully updated']); 
 	}
 
 	public function getDelete($general_id)

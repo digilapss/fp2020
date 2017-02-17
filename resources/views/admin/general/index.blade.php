@@ -47,12 +47,15 @@
 							@foreach($generals as $general)
 								<tr>
 									<td>{{ $general->title }}</td>
-									<td>{{ $general->body }}</td>
+									<td>{!! $general->body !!}</td>
 									<td>
-										<a href="{{ route('admin.general.edit', ['category_id' => $general->id]) }}" class="btn btn-xs btn-info">
+										<a href="{{ route('admin.general.view', ['general_id' => $general->id]) }}" class="btn btn-xs btn-primary">
+											View  
+										</a>
+										<a href="{{ route('admin.general.edit', ['general_id' => $general->id]) }}" class="btn btn-xs btn-info">
 											Edit
 										</a>
-										<a href="{{ route('admin.general.delete', ['category_id' => $general->id]) }}" class="btn btn-xs btn-danger">
+										<a href="{{ route('admin.general.delete', ['general_id' => $general->id]) }}" class="btn btn-xs btn-danger">
 											Delete
 										</a>
 									</td>

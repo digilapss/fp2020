@@ -180,7 +180,7 @@ Route::group([
 	]);
 
 	Route::get('/general/view/{general_id}',[
-		'uses' => 'GeneralController@getSingle',
+		'uses' => 'GeneralController@getView',
 		'as' => 'admin.general.view'
 	]);
 
