@@ -11,11 +11,11 @@
 						<li><a class="active" href="#home" class="scroll">HOME</a></li>
 						<li><a href="#about" class="scroll">ABOUT</a></li>
 						<li><a href="#services" class="scroll">COMMITMENT</a></li>
+						<li><a href="#event" class="scroll">EVENT</a></li>
 						<li><a href="#project" class="scroll">DOCUMENT</a></li>
-						<li><a href="#project" class="scroll">STRATEGY</a></li>
+						<li><a href="#strategy" class="scroll">STRATEGY</a></li>
 						<li><a href="#project" class="scroll">PRODUCT</a></li>
 						<li><a href="#project" class="scroll">PICTURE</a></li>
-						<li><a href="#contact" class="scroll">CONTACT</a></li>
 					</ul>
 
 					 <!--start-top-nav-script-->
@@ -156,16 +156,12 @@
         </div>
     </div>
 
-    <div class="project">
+    <div class="project" id="event">
         <div class="container">
             <div class="project-1 clock wow bounceIn">
-                <h3>MORBI IN SEM LOREM PLACERAT</h3>
-                <P>EUISMOD IN PHARETRA ULTRICIES CRASCONSEQUAT VAVIMUS SUP</P>
-                <form>
-			        <input type="text" size="30px"  value="cresent sbsum..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'cresent sbsum...';}">
-
-                    <input type="submit" value="EGESTE">
-                </form>
+                <h3>UPCOMING EVENT</h3>
+                <br>
+                <a href=""><button class="btn btn-default btn-lg">View All</button></a>
             </div>
         </div>
     </div>
@@ -229,7 +225,7 @@
 <!--Responsive-tabs-ends-Here-->
 
 <!--Responsive-tabs-Starts-Here-->
-	<div class="responsive-tabs" id="project2">
+	<div class="responsive-tabs" id="strategy">
 		<div class="container">
 			<div class="tabs-box clock wow bounceIn">
 			<div class="card">
