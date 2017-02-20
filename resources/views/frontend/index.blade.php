@@ -187,11 +187,11 @@
 			<div class="tab-grids">
 				<div id="tab1" class="tab-grid">
 					<div class="col-md-6 line1">
-						<img src="src/frontend/images/port1.png" alt="">
+						<img src="src/frontend/images/car.png" alt="">
 						<p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis Gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis lorem ipsum dolor.</p>
 					    </div>
 					 <div class="col-md-6 line2">   
-				                <img src="src/frontend/images/port2.png" alt="">
+				                <img src="src/frontend/images/grl.png" alt="">
 						<p>Lorem egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis Gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper at felis lorem ipsum dolor.</p>
 					</div>
                                 <div class="clearfix"> </div>
@@ -232,53 +232,51 @@
 	<div class="responsive-tabs" id="project2">
 		<div class="container">
 			<div class="tabs-box clock wow bounceIn">
-			<center><h1><b>Strategy Document</b></h1></center>
-			<br>
-			<div class="clearfix"> </div>
-			<div class="tab-grids">
-				<div class="tab-grid">
-					<div class="col-md-12">
-						<table class="datatable table table-striped primary" cellspacing="0" width="100%">
-						    <thead>
-						        <tr>
-						            <th>Title</th>
-						            <th>Date</th>
-						            <th>Action</th>
-						        </tr>
-						    </thead>
-						    <tbody>
-						    	<tr>
-						    		<td>Document 1</td>
-						    		<td>Date 2</td>
-						    		<td>
-						    			<a href="" class="btn btn-xs btn-primary">
-											Download
-										</a>
-									</td>
-								</tr>
-								<tr>
-						    		<td>Document 3</td>
-						    		<td>Date 4</td>
-						    		<td>
-						    			<a href="" class="btn btn-xs btn-primary">
-											Download
-										</a>
-									</td>
-								</tr>
-								<tr>
-						    		<td>Document 5</td>
-						    		<td>Date 6</td>
-						    		<td>
-						    			<a href="" class="btn btn-xs btn-primary">
-											Download
-										</a>
-									</td>
-								</tr>
-						    </tbody>
-					    </table>
-					</div>
-					<div class="clearfix"> </div>
+			<div class="card">
+				<center><h1><b>Strategy Document</b></h1></center>
+				<br>
+				<div class="clearfix"> </div>
+				<div class="col-md-12">
+					<table class="datatable table table-striped primary" cellspacing="0" width="100%">
+						<thead>
+							<tr>
+							    <th>Title</th>
+							    <th>Date</th>
+							    <th>Action</th>
+						    </tr>
+						</thead>
+						<tbody>
+						    <tr>
+						    	<td>Document 1</td>
+						    	<td>Date 2</td>
+						    	<td>
+						    		<a href="" class="btn btn-xs btn-primary">
+										Download
+									</a>
+								</td>
+							</tr>
+							<tr>
+						    	<td>Document 3</td>
+						    	<td>Date 4</td>
+						    	<td>
+						    		<a href="" class="btn btn-xs btn-primary">
+										Download
+									</a>
+								</td>
+							</tr>
+							<tr>
+						    	<td>Document 5</td>
+						    	<td>Date 6</td>
+						    	<td>
+						    		<a href="" class="btn btn-xs btn-primary">
+										Download
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
+				<div class="clearfix"> </div>
 			</div>
 			</div>
 		</div>
