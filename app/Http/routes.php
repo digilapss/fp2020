@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+	'uses' => 'FrontendController@getIndex',
+	'as' => 'frontend.index'
+]);
 
 
 Route::group([
