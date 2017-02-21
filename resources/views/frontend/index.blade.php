@@ -381,14 +381,33 @@
     <div class="contact" id="contact">
 		<div class="container">
 			<div class="contact-1 clock wow bounceIn">
-				<div class="col-md-3 contact-top1">
-											    
-                                                                                             
-					<div class="clearfix"> </div>
-				</div>
+				<div class="col-md-6 contact-top1">
+					<h3>QUICK CONTACT</h3>
+                    <div class="contact-grid">
+                        <div class="contact-left">
+                     		<img src="{{ URL::to('src/frontend/images/bkkbn-small.png') }}" alt="">
+                     		<br>
+                        </div>
+                        <div class="contact-right">
+                            <img src="{{ URL::to('src/frontend/images/unfpa-small.png') }}" alt="">
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+ 				</div>
+                <div class="col-md-6 contact-top3">
+                    <h3>&nbsp;</h3>
+                    <div class="contact-grid">
+	                   	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d30912.73175219394!2d79.98639619999999!3d14.4218904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1410591500477" width="600" height="450" frameborder="0" style="border:0"> </iframe>
+	                    <h4>Address</h4>
+	                    <p>Building name, some street name, some city name, country</p>
+	                    <a href="mailto:info@example.com">info@sitename.com  /  (000)  888 888 8888</a>
+                    </div>
+                </div>				    
+                <div class="clearfix"> </div>
 			</div>
 		</div>
 	</div>
+	
 
 	<div class="footer">
 		<div class="container">
