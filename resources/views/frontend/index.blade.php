@@ -4,7 +4,7 @@
 	<div class="mother-grid" id="home">
 		<div class="container">
 			<div class="header clock wow bounceIn">
-				<h1><a href="index.html">Family Planning 2020</a></h1>
+				<h1><a href="index.html">FAMILY PLANNING 2020</a></h1>
 				<div class="nav-top">
 					<span class="menu"><img src="{{ URL::to('src/frontend/images/menu-icon.png') }}" alt=""></span>
 					<ul class="navgation">
@@ -40,20 +40,20 @@
 				<div class="flexslider">
 					<ul class="slides">
 						<li>
-							<h2>IPSUM DOLOR SIT AMET LAT</h2>
-	                        <h5>Allquam tincidunt mauris cu risus</h5>
+							<h2>Caption 1</h2>
+	                        <h5>sub caption 1</h5>
 	  	    			</li>
 	 	    			<li>
-							<h2>IPSUM DOLOR SIT AMET LAT</h2>
-							<h5>Allquam tincidunt mauris cu risus</h5>
+							<h2>Caption 2</h2>
+							<h5>sub caption 2</h5>
 						</li>
 						<li>
-							<h2>IPSUM DOLOR SIT AMET LAT</h2>
-							<h5>Allquam tincidunt mauris cu risus</h5>
+							<h2>Caption 3</h2>
+							<h5>sub caption 3</h5>
 						</li>
 						<li>
-							<h2>IPSUM DOLOR SIT AMET LAT</h2>
-							<h5>Allquam tincidunt mauris cu risus</h5>
+							<h2>Caption 4</h2>
+							<h5>sub caption 4</h5>
 						</li>
 					</ul>
 				</div>
@@ -116,7 +116,7 @@
 						<div class="content-right">
 							<h3>Program & Service Delivery</h3>
 							<P>Indonesia will include post-partum family planning services as part of its national childbirth insurance ... </P>
-							<a href="#">MORE</a>
+							<button class="btn btn-info" data-toggle="modal" data-target="#myModal1">MORE</button>
 						</div>
 						<div class="clearfix"> </div>
 					</div>                                                      
@@ -126,7 +126,7 @@
 						<div class="content-right">
 							<h3>Financial <br> &nbsp;</h3>
 							<P>The government commits to maintaining its investment in finances for family planning programs, which has ...</P>
-							<a href="#">MORE</a>
+							<button class="btn btn-info" data-toggle="modal" data-target="#myModal2">MORE</button>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -136,7 +136,7 @@
 						<div class="content-right">
 							<h3>Policy & Political <br> &nbsp;</h3>
 							<P>Indonesia is currently developing a national family planning and population strategy to improve ...</P>
-							<a href="#">MORE</a>
+							<button class="btn btn-info" data-toggle="modal" data-target="#myModal3">MORE</button>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -146,7 +146,7 @@
 							<div class="content-right">
 								<h3>Objective <br> &nbsp;</h3>
                                 <P>Over half of Indonesia's women of reproductive age are using contraception to plan their families ...</P>
-                                <a href="#">MORE</a>
+                                <button class="btn btn-info" data-toggle="modal" data-target="#myModal4">MORE</button>
                             </div>
 						<div class="clearfix"> </div>
 						</div>
@@ -161,7 +161,7 @@
             <div class="project-1 clock wow bounceIn">
                 <h3>UPCOMING EVENT</h3>
                 <br>
-                <a href=""><button class="btn btn-default btn-lg">View All</button></a>
+                <button class="btn btn-default" data-toggle="modal" data-target="#myModal5">View All Event</button>
             </div>
         </div>
     </div>
@@ -176,44 +176,139 @@
 				<li><a href="#tab1"><img src="src/frontend/images/f.png" alt="">TOR</a></li>
 				<li><a href="#tab2"><img src="src/frontend/images/d.png" alt="">Workplans</a></li>
 				<li><a href="#tab3"><img src="src/frontend/images/u.png" alt="">Minutes of Meetings</a></li>
-				<li><a href="#tab4"><img src="src/frontend/images/f.png" alt="">Strategy</a></li>
+				<li><a href="#tab4"><img src="src/frontend/images/f.png" alt="">Power Point</a></li>
 				<li><a href="#tab5"><img src="src/frontend/images/d.png" alt="">Report</a></li>
 			</ul>
 			<div class="clearfix"> </div>
+
 			<div class="tab-grids">
+
 				<div id="tab1" class="tab-grid">
-					<div class="col-md-6 line1">
-						<img src="src/frontend/images/car.png" alt="">
-						<p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis Gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis lorem ipsum dolor.</p>
-					    </div>
-					 <div class="col-md-6 line2">   
-				                <img src="src/frontend/images/grl.png" alt="">
-						<p>Lorem egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis Gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper at felis lorem ipsum dolor.</p>
+					<div class="col-md-12 line1">
+						<blockquote>
+							<h3>TOR 1</h3>
+						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+						    <footer>Unfpa | January 1, 2016</footer>
+						    <br>
+						    <button class="btn btn-info">Download</button>
+						</blockquote>
 					</div>
-                                <div class="clearfix"> </div>
+					<div class="col-md-12 line1">
+						<blockquote>
+							<h3>TOR 2</h3>
+						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+						    <footer>Unfpa | January 1, 2016</footer>
+						    <br>
+						    <button class="btn btn-info">Download</button>
+						</blockquote>
+					</div>
+					<div class="clearfix"></div>
+					<div align="right"> 
+						<button class="btn btn-info btn-block">View All</button>
+					</div>
 				</div>
+
 				<div id="tab2" class="tab-grid">
-					<div class="col-md-6 line1">
-						<img src="src/frontend/images/car.png" alt="">
-						<p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis Gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis lorem ipsum dolor.</p>
-					    </div>
-					 <div class="col-md-6 line2">   
-				                <img src="src/frontend/images/grl.png" alt="">
-						<p>Lorem egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis Gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper at felis lorem ipsum dolor.</p>
+					<div class="col-md-12 line1">
+						<blockquote>
+							<h3>Workplan 1</h3>
+						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+						    <footer>Unfpa | January 1, 2016</footer>
+						    <br>
+						    <button class="btn btn-info">Download</button>
+						</blockquote>
 					</div>
-				  <div class="clearfix"> </div>
+					<div class="col-md-12 line1">
+						<blockquote>
+							<h3>Workplan 2</h3>
+						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+						    <footer>Unfpa | January 1, 2016</footer>
+						    <br>
+						    <button class="btn btn-info">Download</button>
+						</blockquote>
+					</div>
+					<div class="clearfix"></div>
+					<div align="right"> 
+						<button class="btn btn-info btn-block">View All</button>
+					</div>
 				</div>
+
 				<div id="tab3" class="tab-grid">
-					<div class="col-md-6 line1">
-						<img src="src/frontend/images/boy7.png" alt="">
-						<p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis Gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis lorem ipsum dolor.</p>
-					    </div>
-					 <div class="col-md-6 line2">   
-				                <img src="src/frontend/images/boy9.png" alt="">
-						<p>Lorem egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis Gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper at felis lorem ipsum dolor.</p>
+					<div class="col-md-12 line1">
+						<blockquote>
+							<h3>MoM 1</h3>
+						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+						    <footer>Unfpa | January 1, 2016</footer>
+						    <br>
+						    <button class="btn btn-info">Download</button>
+						</blockquote>
 					</div>
-					 <div class="clearfix"> </div>
+					<div class="col-md-12 line1">
+						<blockquote>
+							<h3>MoM 2</h3>
+						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+						    <footer>Unfpa | January 1, 2016</footer>
+						    <br>
+						    <button class="btn btn-info">Download</button>
+						</blockquote>
+					</div>
+					<div class="clearfix"></div>
+					<div align="right"> 
+						<button class="btn btn-info btn-block">View All</button>
+					</div>
 				</div>
+
+				<div id="tab4" class="tab-grid">
+					<div class="col-md-12 line1">
+						<blockquote>
+							<h3>Power Point 1</h3>
+						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+						    <footer>Unfpa | January 1, 2016</footer>
+						    <br>
+						    <button class="btn btn-info">Download</button>
+						</blockquote>
+					</div>
+					<div class="col-md-12 line1">
+						<blockquote>
+							<h3>Power Point 2</h3>
+						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+						    <footer>Unfpa | January 1, 2016</footer>
+						    <br>
+						    <button class="btn btn-info">Download</button>
+						</blockquote>
+					</div>
+					<div class="clearfix"></div>
+					<div align="right"> 
+						<button class="btn btn-info btn-block">View All</button>
+					</div>
+				</div>
+
+				<div id="tab5" class="tab-grid">
+					<div class="col-md-12 line1">
+						<blockquote>
+							<h3>Report 1</h3>
+						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+						    <footer>Unfpa | January 1, 2016</footer>
+						    <br>
+						    <button class="btn btn-info">Download</button>
+						</blockquote>
+					</div>
+					<div class="col-md-12 line1">
+						<blockquote>
+							<h3>Report 2</h3>
+						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+						    <footer>Unfpa | January 1, 2016</footer>
+						    <br>
+						    <button class="btn btn-info">Download</button>
+						</blockquote>
+					</div>
+					<div class="clearfix"></div>
+					<div align="right"> 
+						<button class="btn btn-info btn-block">View All</button>
+					</div>
+				</div>
+
+
 			</div>
 			</div>
 		</div>
@@ -302,6 +397,111 @@
 			</div>
 		</div>
 		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	</div>
+
+	<!-- Modal -->
+	<div id="myModal1" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Program & Service Delivery</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Some text in the modal.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+
+	<!-- Modal -->
+	<div id="myModal2" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Financial </h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Some text in the modal.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+
+	<!-- Modal -->
+	<div id="myModal3" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Policy & Political</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Some text in the modal.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+
+	<!-- Modal -->
+	<div id="myModal4" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Objective</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Some text in the modal.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+
+	<!-- Modal -->
+	<div id="myModal5" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">All Event</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Some text in the modal.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+
+	  </div>
 	</div>
 
 @endsection
