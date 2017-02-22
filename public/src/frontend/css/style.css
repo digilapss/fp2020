@@ -25,7 +25,7 @@ body a{
 	font-weight:900;
 	width:25%;
         margin:0 auto;
-        border-bottom:1px solid #999;
+        border-bottom:0px solid #999;
         color:#716A72;
 	}
 .header h1 a:hover{

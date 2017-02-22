@@ -4,7 +4,8 @@
 	<div class="mother-grid" id="home">
 		<div class="container">
 			<div class="header clock wow bounceIn">
-				<h1><a href="index.html">FAMILY PLANNING 2020</a></h1>
+				
+				<h1><img src="{{ URL::to('src/frontend/images/fp2020-logo.png') }}" width="80px">&nbsp;&nbsp;<a href="index.html">INDONESIA FAMILY PLANNING 2020</a></h1>
 				<div class="nav-top">
 					<span class="menu"><img src="{{ URL::to('src/frontend/images/menu-icon.png') }}" alt=""></span>
 					<ul class="navgation">
@@ -170,14 +171,14 @@
 	<div class="about" id="project">
 		<div class="container">
 			<div class="tabs-box clock wow bounceIn">
-			<center><h1><b>Document</b></h1></center>
+			<center><h1><b>Documents</b></h1></center>
 			<br>
 			<ul class="tabs-menu">
-				<li><a href="#tab1"><img src="src/frontend/images/f.png" alt="">TOR</a></li>
+				<li><a href="#tab1"><img src="src/frontend/images/f.png" alt="">TORs</a></li>
 				<li><a href="#tab2"><img src="src/frontend/images/d.png" alt="">Workplans</a></li>
 				<li><a href="#tab3"><img src="src/frontend/images/u.png" alt="">Minutes of Meetings</a></li>
-				<li><a href="#tab4"><img src="src/frontend/images/f.png" alt="">Power Point</a></li>
-				<li><a href="#tab5"><img src="src/frontend/images/d.png" alt="">Report</a></li>
+				<li><a href="#tab4"><img src="src/frontend/images/f.png" alt="">PowerPoints</a></li>
+				<li><a href="#tab5"><img src="src/frontend/images/d.png" alt="">Reports</a></li>
 			</ul>
 			<div class="clearfix"> </div>
 
@@ -203,9 +204,7 @@
 						</blockquote>
 					</div>
 					<div class="clearfix"></div>
-					<div align="right"> 
-						<button class="btn btn-info btn-block">View All</button>
-					</div>
+					<center><button class="btn btn-primary">View All</button></center>
 				</div>
 
 				<div id="tab2" class="tab-grid">
@@ -228,9 +227,7 @@
 						</blockquote>
 					</div>
 					<div class="clearfix"></div>
-					<div align="right"> 
-						<button class="btn btn-info btn-block">View All</button>
-					</div>
+					<center><button class="btn btn-primary">View All</button></center>
 				</div>
 
 				<div id="tab3" class="tab-grid">
@@ -253,9 +250,7 @@
 						</blockquote>
 					</div>
 					<div class="clearfix"></div>
-					<div align="right"> 
-						<button class="btn btn-info btn-block">View All</button>
-					</div>
+					<center><button class="btn btn-primary">View All</button></center>
 				</div>
 
 				<div id="tab4" class="tab-grid">
@@ -278,9 +273,7 @@
 						</blockquote>
 					</div>
 					<div class="clearfix"></div>
-					<div align="right"> 
-						<button class="btn btn-info btn-block">View All</button>
-					</div>
+					<center><button class="btn btn-primary">View All</button></center>
 				</div>
 
 				<div id="tab5" class="tab-grid">
@@ -303,9 +296,7 @@
 						</blockquote>
 					</div>
 					<div class="clearfix"></div>
-					<div align="right"> 
-						<button class="btn btn-info btn-block">View All</button>
-					</div>
+					<center><button class="btn btn-primary">View All</button></center>
 				</div>
 
 
@@ -381,28 +372,25 @@
     <div class="contact" id="contact">
 		<div class="container">
 			<div class="contact-1 clock wow bounceIn">
-				<div class="col-md-6 contact-top1">
-					<h3>QUICK CONTACT</h3>
+				<div class="col-md-3 contact-top1">
+					<h3>Connect with us</h3>
                     <div class="contact-grid">
-                        <div class="contact-left">
-                     		<img src="{{ URL::to('src/frontend/images/bkkbn-small.png') }}" alt="">
-                     		<br>
-                        </div>
-                        <div class="contact-right">
-                            <img src="{{ URL::to('src/frontend/images/unfpa-small.png') }}" alt="">
-                        </div>
+                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/facebook.png') }}" alt="" height="100px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/twitter.png') }}" alt="" height="100px"></a>
                         <div class="clearfix"></div>
                     </div>
  				</div>
-                <div class="col-md-6 contact-top3">
-                    <h3>&nbsp;</h3>
+				<div class="col-md-9 contact-top1">
+					<h3>Core Partners</h3>
                     <div class="contact-grid">
-	                   	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d30912.73175219394!2d79.98639619999999!3d14.4218904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1410591500477" width="600" height="450" frameborder="0" style="border:0"> </iframe>
-	                    <h4>Address</h4>
-	                    <p>Building name, some street name, some city name, country</p>
-	                    <a href="mailto:info@example.com">info@sitename.com  /  (000)  888 888 8888</a>
+                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/bkkbn-small.png') }}" alt=""></a>&nbsp;&nbsp;
+                     	<a href="{{ URL::to('http://www.depkes.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/kemenkes-small.png') }}" alt=""></a>&nbsp;&nbsp;
+                        <a href="{{ URL::to('http://indonesia.unfpa.org/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/unfpa-small.png') }}" alt=""></a>&nbsp;&nbsp;
+                        <a href="{{ URL::to('https://www.usaid.gov/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/usaid-small.png') }}" alt=""></a>&nbsp;&nbsp;
+                        <div class="clearfix"></div>
                     </div>
-                </div>				    
+ 				</div>
+                		    
                 <div class="clearfix"> </div>
 			</div>
 		</div>
