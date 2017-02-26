@@ -14,14 +14,26 @@
           </div>
           <div class="title">Dashboard</div>
         </a>
-      </li>
-      <li {{ Request::is('admin/general*') ? 'class=active' : '' }}>
-        <a href="{{ route('admin.general.index') }}">
+        </li>
+      <li class="{{ Request::is('admin/general*') ? 'dropdown active' : 'dropdown' }}" >
+        <a class="dropdown-toggle" data-toggle="dropdown">
           <div class="icon">
             <i class="fa fa-info-circle" aria-hidden="true"></i>
           </div>
           <div class="title">General Information</div>
         </a>
+        <div class="dropdown-menu">
+          <ul>
+            <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> Profile</li>
+            <li><a href="{{ route('admin.general.index') }}">Profile</a></li>
+            <li class="line"></li>
+            <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> Commitment</li>
+            <li><a href="{{ route('admin.general.view', ['general_id' => 1]) }}">Program & Service Delivery</a></li>
+            <li><a href="{{ route('admin.general.view', ['general_id' => 2]) }}">Financial</a></li>
+            <li><a href="{{ route('admin.general.view', ['general_id' => 3]) }}">Policy & Political</a></li>
+            <li><a href="{{ route('admin.general.view', ['general_id' => 4]) }}">Objective</a></li>
+          </ul>
+        </div>
       </li>
       <li {{ Request::is('admin/uevent*') ? 'class=active' : '' }}>
         <a href="{{ route('admin.uevent.index') }}">

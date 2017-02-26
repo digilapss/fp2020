@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+	'uses' => 'FrontendController@getIndex',
+	'as' => 'frontend.index'
+]);
 
 
 Route::group([
@@ -180,7 +181,7 @@ Route::group([
 	]);
 
 	Route::get('/general/view/{general_id}',[
-		'uses' => 'GeneralController@getSingle',
+		'uses' => 'GeneralController@getView',
 		'as' => 'admin.general.view'
 	]);
 
@@ -197,6 +198,43 @@ Route::group([
 	Route::get('/general/delete/{general_id}', [
 		'uses' => 'GeneralController@getDelete',
 		'as' => 'admin.general.delete'
+	]);
+	//End General Route
+
+	//Partner Route
+	Route::get('/partner',[
+		'uses' => 'PartnerController@getIndex',
+		'as' => 'admin.partner.index'
+	]);
+
+	Route::get('/partner/create', [
+		'uses' => 'PartnerController@getCreate',
+		'as' => 'admin.partner.create'
+	]);
+
+	Route::post('/partner/create', [
+		'uses' => 'PartnerController@postCreate',
+		'as' => 'admin.partner.post.create'
+	]);
+
+	Route::get('/partner/view/{partner_id}',[
+		'uses' => 'PartnerController@getView',
+		'as' => 'admin.partner.view'
+	]);
+
+	Route::get('/partner/edit/{partner_id}',[
+		'uses' => 'PartnerController@getUpdate',
+		'as' => 'admin.partner.edit'
+	]);
+
+	Route::post('/partner/edit/update',[
+		'uses' => 'PartnerController@postUpdate',
+		'as' => 'admin.partner.update'
+	]);
+
+	Route::get('/partner/delete/{partner_id}', [
+		'uses' => 'PartnerController@getDelete',
+		'as' => 'admin.partner.delete'
 	]);
 	//End General Route
 	

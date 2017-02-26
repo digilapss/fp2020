@@ -11,11 +11,11 @@
 		<div class="col-md-12">
 		    <div class="card">
 		        <div class="card-header">
-					<h1>General Information</h1>
+					<h1>Partners</h1>
 		       	</div>
 		       	<div class="card-body">
-		       		<a href="{{ route('admin.general.create') }}">
-		        		<button class="btn btn-primary">Add General Information</button>
+		       		<a href="{{ route('admin.partner.create') }}">
+		        		<button class="btn btn-primary">Add Partners</button>
 		        	</a>
 
 		        </div>
@@ -33,29 +33,30 @@
 		        	<table class="datatable table table-striped primary" cellspacing="0" width="100%">
 					    <thead>
 					        <tr>
-					        	<th>Title</th>
-					            <th>Information</th>
+					        	<th>Name</th>
+					            <th>Website</th>
+					            <th>Logo</th>
+					            <th>Narrative</th>
 					            <th>Action</th>
 					        </tr>
 					    </thead>
 					    <tbody>
-					    @if(count($generals) == 0)
+					    @if(count($partners) == 0)
 					    	<tr>
-					    		<td colspan="5"><center>No General Information</center></td>
+					    		<td colspan="5"><center>No Partner</center></td>
 					    	</tr>
 						@else
-							@foreach($generals as $general)
+							@foreach($partners as $partner)
 								<tr>
-									<td>{{ $general->title }}</td>
-									<td>{!! $general->body !!}</td>
+									<td>{{ $partner->name }}</td>
+									<td>{{ $partner->website  }}</td>
+									<td>{{ $partner->logo }}</td>
+									<td>{!! $partner->narrative !!}</td>
 									<td>
-										<a href="{{ route('admin.general.view', ['general_id' => $general->id]) }}" class="btn btn-xs btn-primary">
-											View  
-										</a>
-										<a href="{{ route('admin.general.edit', ['general_id' => $general->id]) }}" class="btn btn-xs btn-info">
+										<a href="{{ route('admin.partner.edit', ['patner_id' => $partner->id]) }}" class="btn btn-xs btn-info">
 											Edit
 										</a>
-										<a href="{{ route('admin.general.delete', ['general_id' => $general->id]) }}" class="btn btn-xs btn-danger">
+										<a href="{{ route('admin.partner.delete', ['patner_id' => $partner->id]) }}" class="btn btn-xs btn-danger">
 											Delete
 										</a>
 									</td>
