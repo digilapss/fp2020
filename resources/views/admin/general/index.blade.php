@@ -47,7 +47,7 @@
 							@foreach($generals as $general)
 								<tr>
 									<td>{{ $general->title }}</td>
-									<td>{{ $general->body }}</td>
+									<td>{!! $general->body !!}</td>
 									<td>
 										<a href="{{ route('admin.general.edit', ['category_id' => $general->id]) }}" class="btn btn-xs btn-info">
 											Edit
