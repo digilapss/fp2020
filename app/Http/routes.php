@@ -16,6 +16,10 @@ Route::get('/', [
 	'as' => 'frontend.index'
 ]);
 
+Route::get('/working', [
+	'uses' => 'FrontendController@getWorking',
+	'as' => 'frontend.working'
+]);
 
 Route::group([
 	'prefix' => '/admin'

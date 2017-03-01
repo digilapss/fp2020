@@ -13,10 +13,8 @@
 						<li><a href="#about" class="scroll">ABOUT</a></li>
 						<li><a href="#services" class="scroll">COMMITMENT</a></li>
 						<li><a href="#event" class="scroll">EVENT</a></li>
-						<li><a href="#project" class="scroll">DOCUMENT</a></li>
-						<li><a href="#strategy" class="scroll">STRATEGY</a></li>
-						<li><a href="#project" class="scroll">PRODUCT</a></li>
-						<li><a href="#project" class="scroll">PICTURE</a></li>
+						<li><a href="#project" class="scroll">WORKING DOCUMENT</a></li>
+						<li><a href="#project" class="scroll">NEWS & PHOTO</a></li>
 					</ul>
 
 					 <!--start-top-nav-script-->
@@ -84,10 +82,10 @@
 			<div class="about1 clock wow bounceIn">
 				<div class="col-md-6 ">
 					<div class="about-top">
-						<h2>COUNTRY DATA AND RESOURCES </h2>
+						<h2>Strategy</h2>
 						<br>
-						<h3>AT YOUR FINGERTIPS</h3>
-						<a href="#">MORE INFO</a>
+						<h3>Document</h3>
+						<a href="#">Download</a>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -116,7 +114,7 @@
 					<div class="content-grids">
 						<div class="content-right">
 							<h3>Program & Service Delivery</h3>
-							<P>Indonesia will include post-partum family planning services as part of its national childbirth insurance ... </P>
+							<p>{{ $programshort }}</p>
 							<button class="btn btn-info" data-toggle="modal" data-target="#myModal1">MORE</button>
 						</div>
 						<div class="clearfix"> </div>
@@ -126,7 +124,7 @@
 					<div class="content-grids">
 						<div class="content-right">
 							<h3>Financial <br> &nbsp;</h3>
-							<P>The government commits to maintaining its investment in finances for family planning programs, which has ...</P>
+							<P>{{ $financialshort }}</P>
 							<button class="btn btn-info" data-toggle="modal" data-target="#myModal2">MORE</button>
 						</div>
 						<div class="clearfix"> </div>
@@ -136,7 +134,7 @@
 					<div class="content-grids">
 						<div class="content-right">
 							<h3>Policy & Political <br> &nbsp;</h3>
-							<P>Indonesia is currently developing a national family planning and population strategy to improve ...</P>
+							<P>{{ $policyshort }}</P>
 							<button class="btn btn-info" data-toggle="modal" data-target="#myModal3">MORE</button>
 						</div>
 						<div class="clearfix"> </div>
@@ -146,7 +144,7 @@
 						<div class="content-grids">
 							<div class="content-right">
 								<h3>Objective <br> &nbsp;</h3>
-                                <P>Over half of Indonesia's women of reproductive age are using contraception to plan their families ...</P>
+                                <P>{{ $objectiveshort }}</P>
                                 <button class="btn btn-info" data-toggle="modal" data-target="#myModal4">MORE</button>
                             </div>
 						<div class="clearfix"> </div>
@@ -171,14 +169,14 @@
 	<div class="about" id="project">
 		<div class="container">
 			<div class="tabs-box clock wow bounceIn">
-			<center><h1><b>Documents</b></h1></center>
+			<center><h1><b>Working Documents</b></h1></center>
 			<br>
 			<ul class="tabs-menu">
-				<li><a href="#tab1"><img src="src/frontend/images/f.png" alt="">TORs</a></li>
+				<li><a href="#tab1"><img src="src/frontend/images/f.png" alt="">Strategy</a></li>
 				<li><a href="#tab2"><img src="src/frontend/images/d.png" alt="">Workplans</a></li>
-				<li><a href="#tab3"><img src="src/frontend/images/u.png" alt="">Minutes of Meetings</a></li>
-				<li><a href="#tab4"><img src="src/frontend/images/f.png" alt="">PowerPoints</a></li>
 				<li><a href="#tab5"><img src="src/frontend/images/d.png" alt="">Reports</a></li>
+				<li><a href="#tab4"><img src="src/frontend/images/f.png" alt="">PowerPoints</a></li>
+				<li><a href="#tab1"><img src="src/frontend/images/f.png" alt="">TORs & MoM</a></li>
 			</ul>
 			<div class="clearfix"> </div>
 
@@ -384,7 +382,7 @@
 					<h3>Core Partners</h3>
                     <div class="contact-grid">
                         <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/bkkbn-small.png') }}" alt=""></a>&nbsp;&nbsp;
-                     	<a href="{{ URL::to('http://www.depkes.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/kemenkes-small.png') }}" alt=""></a>&nbsp;&nbsp;
+
                         <a href="{{ URL::to('http://indonesia.unfpa.org/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/unfpa-small.png') }}" alt=""></a>&nbsp;&nbsp;
                         <a href="{{ URL::to('https://www.usaid.gov/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/usaid-small.png') }}" alt=""></a>&nbsp;&nbsp;
                         <div class="clearfix"></div>
@@ -397,14 +395,7 @@
 	</div>
 	
 
-	<div class="footer">
-		<div class="container">
-			<div class="footer-text">
-				<p> &copy 2014 Template by <a href="http://w3layouts.com/">w3layouts</a></p>
-			</div>
-		</div>
-		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-	</div>
+	
 
 	<!-- Modal -->
 	<div id="myModal1" class="modal fade" role="dialog">
@@ -417,7 +408,7 @@
 	        <h4 class="modal-title">Program & Service Delivery</h4>
 	      </div>
 	      <div class="modal-body">
-	        <p>Some text in the modal.</p>
+	        <p>{{ $program->body }}</p>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -438,7 +429,7 @@
 	        <h4 class="modal-title">Financial </h4>
 	      </div>
 	      <div class="modal-body">
-	        <p>Some text in the modal.</p>
+	        <p>{{ $financial->body }}</p>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -459,7 +450,7 @@
 	        <h4 class="modal-title">Policy & Political</h4>
 	      </div>
 	      <div class="modal-body">
-	        <p>Some text in the modal.</p>
+	        <p>{{ $policy->body }}</p>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -480,7 +471,7 @@
 	        <h4 class="modal-title">Objective</h4>
 	      </div>
 	      <div class="modal-body">
-	        <p>Some text in the modal.</p>
+	        <p>{{ $objective->body }}</p>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

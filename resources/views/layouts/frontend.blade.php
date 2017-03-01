@@ -34,6 +34,8 @@
 </head>
 <body>
       @yield('content')
+
+      
       
       <script type="text/javascript">
         var baseUrl = "{{ URL::to('/') }}";
