@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\General;
 use App\Document;
+use App\Category;
+use App\Uevent;
 
 class FrontendController extends Controller
 {
@@ -40,6 +42,21 @@ class FrontendController extends Controller
 	public function getWorking()
 	{
 		return view('frontend.working');
+	}
+
+	public function getDocument($category_id)
+	{
+		$category = Category::find($category_id);
+		$documents = Document::where('category_id', '=', $category_id)->orderBy('date', 'desc')->get();
+
+		return view('frontend.document', ['documents' => $documents], ['category' => $category]);
+	}
+
+	public function getEvent()
+	{
+		$uevents = Uevent::orderBy('date','desc')->get();
+
+		return view('frontend.event', ['events' => $uevents]);
 	}
 
 	private function shortenText($text, $words_count)

@@ -21,6 +21,16 @@ Route::get('/working', [
 	'as' => 'frontend.working'
 ]);
 
+Route::get('/event', [
+	'uses' => 'FrontendController@getEvent',
+	'as' => 'frontend.event'
+]);
+
+Route::get('/document/{category_id}', [
+	'uses' => 'FrontendController@getDocument',
+	'as' => 'frontend.document'
+]);
+
 Route::group([
 	'prefix' => '/admin'
 ], function(){

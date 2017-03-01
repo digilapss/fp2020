@@ -8,7 +8,9 @@
 				<h1><img src="{{ URL::to('src/frontend/images/fp2020-logo.png') }}" width="80px">&nbsp;&nbsp;<a href="index.html">INDONESIA FAMILY PLANNING 2020</a></h1>
 				<div class="nav-top">
 					<span class="menu"><img src="{{ URL::to('src/frontend/images/menu-icon.png') }}" alt=""></span>
-					
+					<ul class="navgation">
+						<li><a class="active" href="{{ route('frontend.index') }}" class="scroll">BACK TO HOME</a></li>
+					</ul>
 
 					 <!--start-top-nav-script-->
 					 <script>
@@ -29,51 +31,27 @@
 	<div class="about" id="strategy">
 	<div class="container">
 		<div class="tabs-box clock wow bounceIn">
-					<div class="col-md-12 ">
-					<center><h1><b>Working Group</b></h1></center>
-						<blockquote>
-							<h3>Report 1</h3>
-						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
-						    
-						</blockquote>
-					</div>
-
-					<div class="col-md-12 ">
-						<blockquote>
-							<h3>Report 1</h3>
-						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
-						    
-						</blockquote>
-						<br>
-						<br>
-					</div>
-		</div>
-	</div>
-	</div>
-
-	<div class="responsive-tabs" id="project">
-	<div class="container">
-		<div class="tabs-box clock wow bounceIn">
-					<div class="col-md-12 ">
-					<center><h1><b>Focal Point</b></h1></center>
-						<blockquote>
-							<h3>Report 1</h3>
-						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
-						    
-						</blockquote>
-					</div>
-
-					<div class="col-md-12 ">
-						<blockquote>
-							<h3>Report 1</h3>
-						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
-						    
-						</blockquote>
-						<br>
-						<br>
+					<center><h1>{{ $category->name }} Document</h1></center>
+					<div class="col-md-12">
+						@if(count($documents) == 0)
+					    	 <center><h1>No Document</h1></center>
+					    	 <br>
+						@else
+							@foreach($documents as $document)
+								<blockquote>
+									<h3>{{ $document->name }}</h3>
+								    <p>{{ $document->description }}</p>
+								    <footer>{{ $document->date }}</footer>
+								    <br>
+								    <a href="{{ asset("documents/$document->file") }}" class="btn btn-info" >Download</a>
+								</blockquote>
+							@endforeach
+						@endif
 					</div>
 		</div>
 	</div>
+	</div>
+
 	</div>
 				<div class="contact" id="contact">
 					<div class="container">

@@ -160,7 +160,7 @@
             <div class="project-1 clock wow bounceIn">
                 <h3>UPCOMING EVENT</h3>
                 <br>
-                <button class="btn btn-default" data-toggle="modal" data-target="#myModal5">View All Event</button>
+                <center><a href="{{ route('frontend.event', ['document_id' => 3]) }}" class="btn btn-default"> View All Event</a></center>
             </div>
         </div>
     </div>
@@ -198,7 +198,7 @@
 							@endforeach
 						@endif
 					</div>
-					<center><button class="btn btn-primary">View All</button></center>
+					<center><a href="{{ route('frontend.document', ['document_id' => 1]) }}" class="btn btn-primary"> View All</a></center>
 				</div>
 
 				<div id="tab2" class="tab-grid">
@@ -219,7 +219,7 @@
 						@endif
 					</div>
 					
-					<center><button class="btn btn-primary">View All</button></center>
+					<center><a href="{{ route('frontend.document', ['document_id' => 2]) }}" class="btn btn-primary"> View All</a></center>
 				</div>
 
 				<div id="tab3" class="tab-grid">
@@ -240,7 +240,7 @@
 						@endif
 					</div>
 					
-					<center><button class="btn btn-primary">View All</button></center>
+					<center><a href="{{ route('frontend.document', ['document_id' => 3]) }}" class="btn btn-primary"> View All</a></center>
 				</div>
 
 				<div id="tab4" class="tab-grid">
@@ -261,7 +261,7 @@
 						@endif
 					</div>
 					
-					<center><button class="btn btn-primary">View All</button></center>
+					<center><a href="{{ route('frontend.document', ['document_id' => 4]) }}" class="btn btn-primary"> View All</a></center>
 				</div>
 
 				<div id="tab5" class="tab-grid">
@@ -282,7 +282,7 @@
 						@endif
 					</div>
 						
-					<center><button class="btn btn-primary">View All</button></center>
+					<center><a href="{{ route('frontend.document', ['document_id' => 5]) }}" class="btn btn-primary"> View All</a></center>
 				</div>
 
 
