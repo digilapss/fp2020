@@ -50,9 +50,14 @@
 										<a href="{{ route('admin.category.edit', ['category_id' => $category->id]) }}" class="btn btn-xs btn-info">
 											Edit
 										</a>
-										<a href="{{ route('admin.category.delete', ['category_id' => $category->id]) }}" class="btn btn-xs btn-danger">
-											Delete
-										</a>
+										
+										@if($category->id != 1 && $category->id != 2 && $category->id != 3 && $category->id != 4 && $category->id != 5)
+
+											<a href="{{ route('admin.category.delete', ['category_id' => $category->id]) }}" class="btn btn-xs btn-danger">
+												Delete
+											</a>
+
+										@endif
 									</td>
 								</tr>
 							@endforeach
