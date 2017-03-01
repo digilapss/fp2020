@@ -16,6 +16,7 @@ class CreateDocumentsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('name');
+            $table->date('date')->nullable();
             $table->string('description');
             $table->string('file');
             $table->integer('category_id');

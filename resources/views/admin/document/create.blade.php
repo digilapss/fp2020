@@ -18,6 +18,12 @@
 					          <input type="text" class="form-control" placeholder="" id="name" name="name" value="{{ Request::old('name') }}">
 					        </div>
 					    </div>
+					     <div class=" {{ $errors->has('date') ? 'form-group has-error' : 'form-group'}} ">
+					        <label class="col-md-2 control-label">Date</label>
+					        <div class="col-md-10">
+					          <input type="text" class="form-control" placeholder="" id="dp1" name="date" value="{{ Request::old('date') }}">
+					        </div>
+					    </div>
 					    <div class=" {{ $errors->has('category') ? 'form-group has-error' : 'form-group'}} ">
 					        <label class="col-md-2 control-label">Category</label>
 					        <div class="col-md-4">

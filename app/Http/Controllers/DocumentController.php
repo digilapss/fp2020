@@ -32,6 +32,7 @@ class DocumentController extends Controller
 
 		$document = new Document();
 		$document->name = $request['name'];
+		$document->date = $request['date'];
 		$document->description = $request['description'];
 		$document->category_id = $request['category_id'];
 
@@ -66,7 +67,7 @@ class DocumentController extends Controller
 	public function postUpdate(Request $request)
 	{
 		$this->validate($request, [
-			'name' 			=> 'required|max:120|unique:documents',
+			'name' 			=> 'required|max:120',
 			'description' 	=> 'required|max:150',
 			'file' 			=> 'required',
 			'category_id' 	=> 'required'
@@ -74,14 +75,15 @@ class DocumentController extends Controller
 
 		$document = Document::find($request['document_id']);
 		$document->name = $request['name'];
+		$document->date = $request['date'];
 		$document->description = $request['description'];
 		$document->category_id = $request['category_id'];
-		
+
+						
 		if($file = $request->hasFile('file')) {
             
             $file = $request->file('file') ;
             
-
             $fileName = $request['name'];
             $extension = $file->getClientOriginalExtension();
 

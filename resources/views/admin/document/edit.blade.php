@@ -11,11 +11,17 @@
 		        	<div class="col-lg-10 col-md-offset-2">
 						@include('includes.info-box')
 					</div>
-		        	<form class="form form-horizontal" action="{{ route('admin.document.update') }}" method="post">
+		        	<form class="form form-horizontal" action="{{ route('admin.document.update') }}" method="post" enctype="multipart/form-data">
 					  	<div class=" {{ $errors->has('name') ? 'form-group has-error' : 'form-group'}} ">
 					        <label class="col-md-2 control-label">Name</label>
 					        <div class="col-md-10">
 					          <input type="text" class="form-control" placeholder="" id="name" name="name" value="{{ Request::old('name') ? Request::old('name') : isset($document) ? $document->name : '' }}">
+					        </div>
+					    </div>
+					    <div class=" {{ $errors->has('date') ? 'form-group has-error' : 'form-group'}} ">
+					        <label class="col-md-2 control-label">Date</label>
+					        <div class="col-md-10">
+					          <input type="text" class="form-control" placeholder="" id="dp1" name="date" value="{{ Request::old('date') ? Request::old('date') : isset($document) ? $document->date : '' }}">
 					        </div>
 					    </div>
 					    <div class=" {{ $errors->has('category') ? 'form-group has-error' : 'form-group'}} ">
@@ -28,7 +34,7 @@
 							   </select>
 					        </div>
 					    </div>
-					    <div class=" {{ $errors->has('place') ? 'form-group has-error' : 'form-group'}} ">
+					    <div class=" {{ $errors->has('file') ? 'form-group has-error' : 'form-group'}} ">
 					        <label class="col-md-2 control-label">File</label>
 					        <div class="col-md-10">
 					        	<input type="file" class="form-control" placeholder="" id="file" name="file" value="{{ Request::old('file') }}">

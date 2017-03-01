@@ -21,7 +21,7 @@
 					    <div class=" {{ $errors->has('date') ? 'form-group has-error' : 'form-group'}} ">
 					        <label class="col-md-2 control-label">Date</label>
 					        <div class="col-md-10">
-					          <input type="text" class="form-control" placeholder="" id="date" name="date" value="{{ Request::old('date') ? Request::old('date') : isset($uevent) ? $uevent->date : '' }}">
+					          <input type="text" class="form-control" placeholder="" id="dp1" name="date" value="{{ Request::old('date') ? Request::old('date') : isset($uevent) ? $uevent->date : '' }}">
 					        </div>
 					    </div>
 					    <div class=" {{ $errors->has('place') ? 'form-group has-error' : 'form-group'}} ">

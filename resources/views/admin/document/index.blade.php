@@ -34,8 +34,8 @@
 					    <thead>
 					        <tr>
 					            <th>Name</th>
+					            <th>Date</th>
 					            <th>Category</th>
-					            <th>Uploaded at</th>
 					            <th>Description</th>
 					            <th>File</th>
 					            <th>Action</th>
@@ -50,8 +50,8 @@
 							@foreach($documents as $document)
 								<tr>
 									<td>{{ $document->name }}</td>
+									<td>{{ $document->date}}</td>
 									<td>{{ $document->category->name }}</td>
-									<td>{{ $document->updated_at}}</td>
 									<td>{{ $document->description }}</td>
 									<td>{{ $document->body }}
 										<a href="{{ asset("documents/$document->file") }}" class="btn btn-xs btn-success">

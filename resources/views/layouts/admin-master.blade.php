@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="{{ URL::to('src/backend/assets/css/theme/red.css') }}">
   <link rel="stylesheet" href="{{ URL::to('src/backend/assets/css/theme/yellow.css') }}">
 
+  <!-- Datepicker -->
+  <link rel="stylesheet" href="{{ URL::to('src/datepicker/css/datepicker.css') }}">
+
 </head>
 <body>
   <div class="app app-default">
@@ -34,6 +37,13 @@
   
   <script type="text/javascript" src="{{ URL::to('src/backend/assets/js/vendor.js') }}"></script>
   <script type="text/javascript" src="{{ URL::to('src/backend/assets/js/app.js') }}"></script>
+  <script type="text/javascript" src="{{ URL::to('src/datepicker/js/bootstrap-datepicker.js') }}"></script>
+
+  <script>
+    $('#dp1').datepicker({
+        format: 'yyyy-mm-dd'
+      });
+  </script>
 
 </body>
 </html>

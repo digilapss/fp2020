@@ -1,6 +1,7 @@
 @extends('layouts.admin-master')
 
 @section('content')
+	
 	<div class="row">
 		<div class="col-md-12">
 		    <div class="card">
@@ -21,7 +22,7 @@
 					    <div class=" {{ $errors->has('date') ? 'form-group has-error' : 'form-group'}} ">
 					        <label class="col-md-2 control-label">Date</label>
 					        <div class="col-md-10">
-					          <input type="text" class="form-control" placeholder="" id="date" name="date" value="{{ Request::old('date') }}">
+					          <input type="text" class="form-control" placeholder="" id="dp1" name="date" value="{{ Request::old('date') }}">
 					        </div>
 					    </div>
 					    <div class=" {{ $errors->has('place') ? 'form-group has-error' : 'form-group'}} ">
@@ -58,6 +59,9 @@
 		  </div>
 		</div>
 	</div>
+	
+	
+	  
 
 @endsection
 
@@ -65,4 +69,6 @@
 	<script type="text/javascript">
 		var token = "{{ Session::token() }}";
 	</script>
+
+	 
 @endsection
