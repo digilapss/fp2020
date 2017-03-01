@@ -7,6 +7,7 @@ use App\General;
 use App\Document;
 use App\Category;
 use App\Uevent;
+use App\Partner;
 
 class FrontendController extends Controller
 {
@@ -57,6 +58,13 @@ class FrontendController extends Controller
 		$uevents = Uevent::orderBy('date','desc')->get();
 
 		return view('frontend.event', ['events' => $uevents]);
+	}
+
+	public function getPartner()
+	{
+		$partners = Partner::all();
+
+		return view('frontend.partnerpage', ['partners' => $partners]);
 	}
 
 	private function shortenText($text, $words_count)

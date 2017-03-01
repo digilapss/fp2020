@@ -18,7 +18,7 @@ class CreatePartnersTable extends Migration
             $table->string('name');
             $table->string('website')->nullable();
             $table->string('logo')->nullable();
-            $table->string('narrative')->nullable();
+            $table->text('narrative')->nullable();
         });
     }
 

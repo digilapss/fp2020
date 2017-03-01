@@ -15,6 +15,7 @@
 						<li><a href="#event" class="scroll">EVENT</a></li>
 						<li><a href="#project" class="scroll">WORKING DOCUMENT</a></li>
 						<li><a href="#project" class="scroll">NEWS & PHOTO</a></li>
+						<li><a href="#partner" class="scroll">PARTNER</a></li>
 					</ul>
 
 					 <!--start-top-nav-script-->
@@ -160,7 +161,7 @@
             <div class="project-1 clock wow bounceIn">
                 <h3>UPCOMING EVENT</h3>
                 <br>
-                <center><a href="{{ route('frontend.event', ['document_id' => 3]) }}" class="btn btn-default"> View All Event</a></center>
+                <center><a href="{{ route('frontend.event') }}" class="btn btn-default"> Show All Event</a></center>
             </div>
         </div>
     </div>
@@ -198,7 +199,7 @@
 							@endforeach
 						@endif
 					</div>
-					<center><a href="{{ route('frontend.document', ['document_id' => 1]) }}" class="btn btn-primary"> View All</a></center>
+					<center><a href="{{ route('frontend.document', ['document_id' => 1]) }}" class="btn btn-primary"> Show All</a></center>
 				</div>
 
 				<div id="tab2" class="tab-grid">
@@ -219,7 +220,7 @@
 						@endif
 					</div>
 					
-					<center><a href="{{ route('frontend.document', ['document_id' => 2]) }}" class="btn btn-primary"> View All</a></center>
+					<center><a href="{{ route('frontend.document', ['document_id' => 2]) }}" class="btn btn-primary"> Show All</a></center>
 				</div>
 
 				<div id="tab3" class="tab-grid">
@@ -240,7 +241,7 @@
 						@endif
 					</div>
 					
-					<center><a href="{{ route('frontend.document', ['document_id' => 3]) }}" class="btn btn-primary"> View All</a></center>
+					<center><a href="{{ route('frontend.document', ['document_id' => 3]) }}" class="btn btn-primary"> Show All</a></center>
 				</div>
 
 				<div id="tab4" class="tab-grid">
@@ -261,7 +262,7 @@
 						@endif
 					</div>
 					
-					<center><a href="{{ route('frontend.document', ['document_id' => 4]) }}" class="btn btn-primary"> View All</a></center>
+					<center><a href="{{ route('frontend.document', ['document_id' => 4]) }}" class="btn btn-primary"> Show All</a></center>
 				</div>
 
 				<div id="tab5" class="tab-grid">
@@ -282,7 +283,7 @@
 						@endif
 					</div>
 						
-					<center><a href="{{ route('frontend.document', ['document_id' => 5]) }}" class="btn btn-primary"> View All</a></center>
+					<center><a href="{{ route('frontend.document', ['document_id' => 5]) }}" class="btn btn-primary"> Show All</a></center>
 				</div>
 
 
@@ -297,61 +298,14 @@
 <!--Responsive-tabs-ends-Here-->
 
 <!--Responsive-tabs-Starts-Here-->
-	<div class="responsive-tabs" id="strategy">
+	<div class="project" id="partner">
 		<div class="container">
-			<div class="tabs-box clock wow bounceIn">
-			<div class="card">
-				<center><h1><b>Strategy Document</b></h1></center>
-				<br>
-				<div class="clearfix"> </div>
-				<div class="col-md-12">
-					<table class="datatable table table-striped primary" cellspacing="0" width="100%">
-						<thead>
-							<tr>
-							    <th>Title</th>
-							    <th>Date</th>
-							    <th>Action</th>
-						    </tr>
-						</thead>
-						<tbody>
-						    <tr>
-						    	<td>Document 1</td>
-						    	<td>Date 2</td>
-						    	<td>
-						    		<a href="" class="btn btn-xs btn-primary">
-										Download
-									</a>
-								</td>
-							</tr>
-							<tr>
-						    	<td>Document 3</td>
-						    	<td>Date 4</td>
-						    	<td>
-						    		<a href="" class="btn btn-xs btn-primary">
-										Download
-									</a>
-								</td>
-							</tr>
-							<tr>
-						    	<td>Document 5</td>
-						    	<td>Date 6</td>
-						    	<td>
-						    		<a href="" class="btn btn-xs btn-primary">
-										Download
-									</a>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			</div>
-		</div>
-
-		<script type="text/javascript" src="{{ URL::to('src/backend/assets/js/vendor.js') }}"></script>
- 		<script type="text/javascript" src="{{ URL::to('src/backend/assets/js/app.js') }}"></script>
-		
+            <div class="project-1 clock wow bounceIn">
+                <h3>Indonesia Familly Planning Partners</h3>
+                <br>
+                <center><a href="{{ route('frontend.partner')}}" class="btn btn-default"> Show All Partners</a></center>
+            </div>
+        </div>
 	</div>
 	<!--Responsive-tabs-ends-Here-->
 

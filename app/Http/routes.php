@@ -31,6 +31,11 @@ Route::get('/document/{category_id}', [
 	'as' => 'frontend.document'
 ]);
 
+Route::get('/partnerpage',[
+	'uses' => 'FrontendController@getPartner',
+	'as' => 'frontend.partner'
+]);
+
 Route::group([
 	'prefix' => '/admin'
 ], function(){

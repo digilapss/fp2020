@@ -43,20 +43,20 @@
           <div class="title">Upcoming Event</div>
         </a>
       </li>
-      <li {{ Request::is('admin/category*') ? 'class=active' : '' }}>
-        <a href="{{ route('admin.category.index') }}">
-          <div class="icon">
-            <i class="fa fa-tags" aria-hidden="true"></i>
-          </div>
-          <div class="title">Document Category</div>
-        </a>
-      </li>
-      <li {{ Request::is('admin/document*') ? 'class=active' : '' }}>
+    <li {{ Request::is('admin/document*') ? 'class=active' : '' }}>
         <a href="{{ route('admin.document.index') }}">
           <div class="icon">
             <i class="fa fa-file-o" aria-hidden="true"></i>
           </div>
           <div class="title">Document</div>
+        </a>
+      </li>
+      <li {{ Request::is('admin/partner*') ? 'class=active' : '' }}>
+        <a href="{{ route('admin.partner.index') }}">
+          <div class="icon">
+            <i class="fa fa-cube" aria-hidden="true"></i>
+          </div>
+          <div class="title">Partner</div>
         </a>
       </li>
       
