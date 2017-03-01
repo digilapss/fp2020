@@ -4,6 +4,8 @@
   <title>Admin Area</title>
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="shortcut icon" href="{{ asset('/images/fav.png') }}">
 
   <link rel="stylesheet" href="{{ URL::to('src/backend/assets/css/vendor.css') }}">
   <link rel="stylesheet" href="{{ URL::to('src/backend/assets/css/flat-admin.css')}}">

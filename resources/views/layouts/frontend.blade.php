@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Family Planning 2020</title>
+<link rel="shortcut icon" href="{{ asset('/images/fav.png') }}">
 <link rel="stylesheet" href="{{ URL::to('src/backend/assets/css/vendor.css') }}">
 <link href="{{ URL::to('src/frontend/css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
 <link href="{{ URL::to('src/frontend/css/style.css') }}" rel='stylesheet' type='text/css' />
