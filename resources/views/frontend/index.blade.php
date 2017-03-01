@@ -173,10 +173,10 @@
 			<br>
 			<ul class="tabs-menu">
 				<li><a href="#tab1"><img src="src/frontend/images/f.png" alt="">Strategy</a></li>
-				<li><a href="#tab2"><img src="src/frontend/images/d.png" alt="">Workplans</a></li>
-				<li><a href="#tab5"><img src="src/frontend/images/d.png" alt="">Reports</a></li>
+				<li><a href="#tab2"><img src="src/frontend/images/f.png" alt="">Workplans</a></li>
+				<li><a href="#tab3"><img src="src/frontend/images/f.png" alt="">Reports</a></li>
 				<li><a href="#tab4"><img src="src/frontend/images/f.png" alt="">PowerPoints</a></li>
-				<li><a href="#tab1"><img src="src/frontend/images/f.png" alt="">TORs & MoM</a></li>
+				<li><a href="#tab5"><img src="src/frontend/images/f.png" alt="">TORs & MoM</a></li>
 			</ul>
 			<div class="clearfix"> </div>
 
@@ -184,116 +184,104 @@
 
 				<div id="tab1" class="tab-grid">
 					<div class="col-md-12 line1">
-						<blockquote>
-							<h3>TOR 1</h3>
-						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
-						    <footer>Unfpa | January 1, 2016</footer>
-						    <br>
-						    <button class="btn btn-info">Download</button>
-						</blockquote>
+						@if(count($strategies) == 0)
+					    	 <center>No Document</center>
+						@else
+							@foreach($strategies as $strategy)
+								<blockquote>
+									<h3>{{ $strategy->name }}</h3>
+								    <p>{{ $strategy->description }}</p>
+								    <footer>{{ $strategy->date }}</footer>
+								    <br>
+								    <a href="{{ asset("documents/$strategy->file") }}" class="btn btn-info" >Download</a>
+								</blockquote>
+							@endforeach
+						@endif
 					</div>
-					<div class="col-md-12 line1">
-						<blockquote>
-							<h3>TOR 2</h3>
-						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
-						    <footer>Unfpa | January 1, 2016</footer>
-						    <br>
-						    <button class="btn btn-info">Download</button>
-						</blockquote>
-					</div>
-					<div class="clearfix"></div>
 					<center><button class="btn btn-primary">View All</button></center>
 				</div>
 
 				<div id="tab2" class="tab-grid">
 					<div class="col-md-12 line1">
-						<blockquote>
-							<h3>Workplan 1</h3>
-						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
-						    <footer>Unfpa | January 1, 2016</footer>
-						    <br>
-						    <button class="btn btn-info">Download</button>
-						</blockquote>
+						@if(count($workplans) == 0)
+					    	 <center><h1>No Document</h1></center>
+					    	 <br>
+						@else
+							@foreach($workplans as $workplan)
+								<blockquote>
+									<h3>{{ $workplan->name }}</h3>
+								    <p>{{ $workplan->description }}</p>
+								    <footer>{{ $workplan->date }}</footer>
+								    <br>
+								    <a href="{{ asset("documents/$workplan->file") }}" class="btn btn-info" >Download</a>
+								</blockquote>
+							@endforeach
+						@endif
 					</div>
-					<div class="col-md-12 line1">
-						<blockquote>
-							<h3>Workplan 2</h3>
-						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
-						    <footer>Unfpa | January 1, 2016</footer>
-						    <br>
-						    <button class="btn btn-info">Download</button>
-						</blockquote>
-					</div>
-					<div class="clearfix"></div>
+					
 					<center><button class="btn btn-primary">View All</button></center>
 				</div>
 
 				<div id="tab3" class="tab-grid">
 					<div class="col-md-12 line1">
-						<blockquote>
-							<h3>MoM 1</h3>
-						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
-						    <footer>Unfpa | January 1, 2016</footer>
-						    <br>
-						    <button class="btn btn-info">Download</button>
-						</blockquote>
+						@if(count($reports) == 0)
+					    	 <center><h1>No Document</h1></center>
+					    	 <br>
+						@else
+							@foreach($reports as $report)
+								<blockquote>
+									<h3>{{ $report->name }}</h3>
+								    <p>{{ $report->description }}</p>
+								    <footer>{{ $report->date }}</footer>
+								    <br>
+								    <a href="{{ asset("documents/$report->file") }}" class="btn btn-info" >Download</a>
+								</blockquote>
+							@endforeach
+						@endif
 					</div>
-					<div class="col-md-12 line1">
-						<blockquote>
-							<h3>MoM 2</h3>
-						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
-						    <footer>Unfpa | January 1, 2016</footer>
-						    <br>
-						    <button class="btn btn-info">Download</button>
-						</blockquote>
-					</div>
-					<div class="clearfix"></div>
+					
 					<center><button class="btn btn-primary">View All</button></center>
 				</div>
 
 				<div id="tab4" class="tab-grid">
 					<div class="col-md-12 line1">
-						<blockquote>
-							<h3>Power Point 1</h3>
-						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
-						    <footer>Unfpa | January 1, 2016</footer>
-						    <br>
-						    <button class="btn btn-info">Download</button>
-						</blockquote>
+						@if(count($ppts) == 0)
+					    	 <center><h1>No Document</h1></center>
+					    	 <br>
+						@else
+							@foreach($ppts as $ppt)
+								<blockquote>
+									<h3>{{ $ppt->name }}</h3>
+								    <p>{{ $ppt->description }}</p>
+								    <footer>{{ $ppt->date }}</footer>
+								    <br>
+								    <a href="{{ asset("documents/$ppt->file") }}" class="btn btn-info" >Download</a>
+								</blockquote>
+							@endforeach
+						@endif
 					</div>
-					<div class="col-md-12 line1">
-						<blockquote>
-							<h3>Power Point 2</h3>
-						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
-						    <footer>Unfpa | January 1, 2016</footer>
-						    <br>
-						    <button class="btn btn-info">Download</button>
-						</blockquote>
-					</div>
-					<div class="clearfix"></div>
+					
 					<center><button class="btn btn-primary">View All</button></center>
 				</div>
 
 				<div id="tab5" class="tab-grid">
 					<div class="col-md-12 line1">
-						<blockquote>
-							<h3>Report 1</h3>
-						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
-						    <footer>Unfpa | January 1, 2016</footer>
-						    <br>
-						    <button class="btn btn-info">Download</button>
-						</blockquote>
+						@if(count($tors) == 0)
+					    	 <center><h1>No Document</h1></center>
+					    	 <br>
+						@else
+							@foreach($tors as $tor)
+								<blockquote>
+									<h3>{{ $tor->name }}</h3>
+								    <p>{{ $tor->description }}</p>
+								    <footer>{{ $tor->date }}</footer>
+								    <br>
+								    <a href="{{ asset("documents/$tor->file") }}" class="btn btn-info" >Download</a>
+								</blockquote>
+							@endforeach
+						@endif
 					</div>
-					<div class="col-md-12 line1">
-						<blockquote>
-							<h3>Report 2</h3>
-						    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
-						    <footer>Unfpa | January 1, 2016</footer>
-						    <br>
-						    <button class="btn btn-info">Download</button>
-						</blockquote>
-					</div>
-					<div class="clearfix"></div>
+						
 					<center><button class="btn btn-primary">View All</button></center>
 				</div>
 
