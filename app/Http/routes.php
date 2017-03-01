@@ -36,12 +36,28 @@ Route::get('/partnerpage',[
 	'as' => 'frontend.partner'
 ]);
 
+Route::get('/admin/login', [
+	'uses' => 'AdminController@getLogin',
+	'as' => 'admin.login'
+]);
+
+Route::post('/admin/login/post', [
+	'uses' => 'AdminController@postLogin',
+	'as' => 'admin.login.post'
+]);
+
 Route::group([
-	'prefix' => '/admin'
+	'prefix' => '/admin',
+	'middleware' => 'auth'
 ], function(){
 	Route::get('/',[
 		'uses' => 'AdminController@getIndex',
 		'as' => 'admin.index'
+	]);
+
+	Route::get('/logout', [
+		'uses' => 'AdminController@getLogout',
+		'as' => 'admin.logout'
 	]);
 
 	Route::get('/uevent',[
