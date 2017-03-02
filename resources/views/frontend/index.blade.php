@@ -10,7 +10,7 @@
 					<span class="menu"><img src="{{ URL::to('src/frontend/images/menu-icon.png') }}" alt=""></span>
 					<ul class="navgation">
 						<li><a class="active" href="#home" class="scroll">HOME</a></li>
-						<li><a href="#about" class="scroll">ABOUT</a></li>
+						<li><a href="#about" class="scroll">HOW WE DO IT</a></li>
 						<li><a href="#services" class="scroll">COMMITMENT</a></li>
 						<li><a href="#event" class="scroll">EVENT</a></li>
 						<li><a href="#project" class="scroll">WORKING DOCUMENT</a></li>
@@ -40,35 +40,39 @@
 		</div>
 	</div>
 
+	
 	<div class="about" id="about">
 		<div class="container">
 			<div class="about1 clock wow bounceIn">
+			<center><h1><b>How we do it</b></h1></center>
+			<br>
 				<div class="row">
-				    <div class="offset-md-2 col-md-8">
-				        <div class="row">
-				            <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-				                <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
-				            </a>
-				            <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-				                <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
-				            </a>
-				            <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-				                <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid">
-				            </a>
-				        </div>
-				        <div class="row">
-				            <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-				                <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
-				            </a>
-				            <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-				                <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
-				            </a>
-				            <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-				                <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid">
-				            </a>
-				        </div>
-				    </div>
-				</div>
+				    <div class="demo-gallery">
+		            <ul id="lightgallery" class="list-unstyled row">
+		                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/1-375.jpg 375, img/1-480.jpg 480, img/1.jpg 800" data-src="src/lightgallery/img/h1.jpg">
+		                    <a href="">
+		                        <img class="img-responsive" src="src/lightgallery/img/h1.jpg">
+		                    </a>
+		                </li>
+		                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/2-375.jpg 375, img/2-480.jpg 480, img/2.jpg 800" data-src="src/lightgallery/img/h2.jpg">
+		                    <a href="">
+		                        <img class="img-responsive" src="src/lightgallery/img/h2.jpg">
+		                    </a>
+		                </li>
+		                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/13-375.jpg 375, img/13-480.jpg 480, img/13.jpg 800" data-src="src/lightgallery/img/h3.jpg" >
+		                    <a href="">
+		                        <img class="img-responsive" src="src/lightgallery/img/h3.jpg">
+		                    </a>
+		                </li>
+		                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/13-375.jpg 375, img/13-480.jpg 480, img/13.jpg 800" data-src="src/lightgallery/img/h4.jpg" >
+		                    <a href="">
+		                        <img class="img-responsive" src="src/lightgallery/img/h4.jpg">
+		                    </a>
+		                </li>
+		            </ul>
+       			</div>
+			</div>
+
 				<!--
 				<div class="col-md-6 ">
 					<div class="about-top">
@@ -153,7 +157,7 @@
                 <br>
                 <center><a href="{{ route('frontend.event') }}" class="btn btn-default"> Show All Event</a></center>
 
-                <center><button data-toggle="modal" data-target="#myModal">MODAL</button></center>
+               
             </div>
         </div>
     </div>
@@ -350,14 +354,22 @@
 </div>
 
 
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.1.1/ekko-lightbox.js"></script>
-	<script>
-    	 $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-			    event.preventDefault();
-			    $(this).ekkoLightbox();
-			});
-    </script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function(){
+            $('#lightgallery').lightGallery();
+        });
+        </script>
+        <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+        <script src="src/lightgallery/js/lightgallery.js"></script>
+        <script src="src/lightgallery/js/lg-fullscreen.js"></script>
+        <script src="src/lightgallery/js/lg-thumbnail.js"></script>
+        <script src="src/lightgallery/js/lg-video.js"></script>
+        <script src="src/lightgallery/js/lg-autoplay.js"></script>
+        <script src="src/lightgallery/js/lg-zoom.js"></script>
+        <script src="src/lightgallery/js/lg-hash.js"></script>
+        <script src="src/lightgallery/js/lg-pager.js"></script>
+        <script src="src/lightgallery/js/jquery.mousewheel.min.js"></script>
 	
 
 @endsection
