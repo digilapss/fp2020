@@ -26,7 +26,7 @@ class DocumentController extends Controller
 		$this->validate($request, [
 			'name' 			=> 'required|max:120|unique:documents',
 			'description' 	=> 'required|max:150',
-			'file' 			=> 'required|size:50000',
+			'file' 			=> 'required',
 			'category_id' 	=> 'required'
 		]);
 
