@@ -116,7 +116,7 @@
 						<div class="content-right">
 							<h3>Program & Service Delivery</h3>
 							<p>{{ $programshort }}</p>
-							<button class="btn btn-info" data-toggle="modal" data-target="#myModal1">MORE</button>
+							<a href="{{ route('frontend.commitment') }}" class="btn btn-default">More</a>
 						</div>
 						<div class="clearfix"> </div>
 					</div>                                                      
@@ -126,7 +126,7 @@
 						<div class="content-right">
 							<h3>Financial <br> &nbsp;</h3>
 							<P>{{ $financialshort }}</P>
-							<button class="btn btn-info" data-toggle="modal" data-target="#myModal2">MORE</button>
+							<a href="{{ route('frontend.commitment') }}" class="btn btn-default">More</a>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -136,7 +136,7 @@
 						<div class="content-right">
 							<h3>Policy & Political <br> &nbsp;</h3>
 							<P>{{ $policyshort }}</P>
-							<button class="btn btn-info" data-toggle="modal" data-target="#myModal3">MORE</button>
+							<a href="{{ route('frontend.commitment') }}" class="btn btn-default">More</a>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -146,7 +146,7 @@
 							<div class="content-right">
 								<h3>Objective <br> &nbsp;</h3>
                                 <P>{{ $objectiveshort }}</P>
-                                <button class="btn btn-info" data-toggle="modal" data-target="#myModal4">MORE</button>
+                                <a href="{{ route('frontend.commitment') }}" class="btn btn-default">More</a>
                             </div>
 						<div class="clearfix"> </div>
 						</div>
@@ -315,18 +315,18 @@
 				<div class="col-md-3 contact-top1">
 					<h3>Connect with us</h3>
                     <div class="contact-grid">
-                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/facebook.png') }}" alt="" height="100px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/twitter.png') }}" alt="" height="100px"></a>
+                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/facebook.png') }}" alt="" height="70px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/twitter.png') }}" alt="" height="70px"></a>
                         <div class="clearfix"></div>
                     </div>
  				</div>
 				<div class="col-md-9 contact-top1">
 					<h3>Core Partners</h3>
                     <div class="contact-grid">
-                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/bkkbn-small.png') }}" alt=""></a>&nbsp;&nbsp;
+                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/bkkbn-small.png') }}" alt="" ></a>&nbsp;&nbsp;
 
                         <a href="{{ URL::to('http://indonesia.unfpa.org/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/unfpa-small.png') }}" alt=""></a>&nbsp;&nbsp;
-                        <a href="{{ URL::to('https://www.usaid.gov/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/usaid-small.png') }}" alt=""></a>&nbsp;&nbsp;
+                        <a href="{{ URL::to('https://www.usaid.gov/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/usaid-small.png') }}" alt="" height="70"></a>&nbsp;&nbsp;
                         <div class="clearfix"></div>
                     </div>
  				</div>
@@ -336,92 +336,6 @@
 		</div>
 	</div>
 	
-
-	
-
-	<!-- Modal -->
-	<div id="myModal1" class="modal fade" role="dialog">
-	  <div class="modal-dialog">
-
-	    <!-- Modal content-->
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h4 class="modal-title">Program & Service Delivery</h4>
-	      </div>
-	      <div class="modal-body">
-	        <p>{{ $program->body }}</p>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-
-	  </div>
-	</div>
-
-	<!-- Modal -->
-	<div id="myModal2" class="modal fade" role="dialog">
-	  <div class="modal-dialog">
-
-	    <!-- Modal content-->
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h4 class="modal-title">Financial </h4>
-	      </div>
-	      <div class="modal-body">
-	        <p>{{ $financial->body }}</p>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-
-	  </div>
-	</div>
-
-	<!-- Modal -->
-	<div id="myModal3" class="modal fade" role="dialog">
-	  <div class="modal-dialog">
-
-	    <!-- Modal content-->
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h4 class="modal-title">Policy & Political</h4>
-	      </div>
-	      <div class="modal-body">
-	        <p>{{ $policy->body }}</p>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-
-	  </div>
-	</div>
-
-	<!-- Modal -->
-	<div id="myModal4" class="modal fade" role="dialog">
-	  <div class="modal-dialog">
-
-	    <!-- Modal content-->
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h4 class="modal-title">Objective</h4>
-	      </div>
-	      <div class="modal-body">
-	        <p>{{ $objective->body }}</p>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-
-	  </div>
-	</div>
 
 @endsection
 

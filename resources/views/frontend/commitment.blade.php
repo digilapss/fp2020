@@ -31,39 +31,34 @@
 	<div class="about" id="strategy">
 	<div class="container">
 		<div class="tabs-box clock wow bounceIn">
-					<center><h1>Indonesia Family Planning 2020 Partner</h1></center>
+					<center><h1>Indonesia Family Planning 2020 Commitment</h1></center>
 					<br><br>
-					
-					@if(count($partners) == 0)
-						<center>No Partner</center>
-					@else
-						@foreach($partners as $partner)
-							<div class="row">
-								<div class="col-md-3">
-									<img src="{{ URL::to("partner/$partner->logo") }}" width="200px">
-								</div>
-								<div class="col-md-9">
-									<table>
-										<tr>
-											<td><h2>{{ $partner->name }}</h2></td>
-										</tr>
-										<tr>
-											<td>{{ $partner->website }}</td>
-										</tr>
-										<tr>
-											<td>&nbsp;</td>
-										</tr>
-										<tr>
-											<td colspan="3">{{ $partner->narrative }}</td>
-										</tr>
-									</table>
-								</div>
-							</div>
 
-							<br><br>
-						@endforeach
-					@endif
-			
+					<h2>{{ $program->title }}</h2>
+					<p>{{ $program->body }}</p>
+
+					<br>
+					<br>
+					
+					<h2>{{ $financial->title }}</h2>
+					<p>{{ $financial->body }}</p>
+
+					<br>
+					<br>
+
+					<h2>{{ $policy->title }}</h2>
+					<p>{{ $policy->body }}</p>
+
+					<br>
+					<br>
+
+					<h2>{{ $objective->title }}</h2>
+					<p>{{ $objective->body }}</p>
+
+					
+
+					
+					
 		</div>
 	</div>
 	</div>
