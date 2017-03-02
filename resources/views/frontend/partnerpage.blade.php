@@ -70,32 +70,31 @@
 
 	</div>
 				<div class="contact" id="contact">
-					<div class="container">
-						<div class="contact-1 clock wow bounceIn">
-							<div class="col-md-3 contact-top1">
-								<h3>Connect with us</h3>
-			                    <div class="contact-grid">
-			                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/facebook.png') }}" alt="" height="100px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-			                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/twitter.png') }}" alt="" height="100px"></a>
-			                        <div class="clearfix"></div>
-			                    </div>
-			 				</div>
-							<div class="col-md-9 contact-top1">
-								<h3>Core Partners</h3>
-			                    <div class="contact-grid">
-			                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/bkkbn-small.png') }}" alt=""></a>&nbsp;&nbsp;
-			                     	
-			                     	
-			                        <a href="{{ URL::to('http://indonesia.unfpa.org/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/unfpa-small.png') }}" alt=""></a>&nbsp;&nbsp;
-			                        <a href="{{ URL::to('https://www.usaid.gov/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/usaid-small.png') }}" alt=""></a>&nbsp;&nbsp;
-			                        <div class="clearfix"></div>
-			                    </div>
-			 				</div>
-			                		    
-			                <div class="clearfix"> </div>
-						</div>
-					</div>
-				</div>
+		<div class="container">
+			<div class="contact-1 clock wow bounceIn">
+				<div class="col-md-3 contact-top1">
+					<h3>Connect with us</h3>
+                    <div class="contact-grid">
+                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/facebook.png') }}" alt="" height="70px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/twitter.png') }}" alt="" height="70px"></a>
+                        <div class="clearfix"></div>
+                    </div>
+ 				</div>
+				<div class="col-md-9 contact-top1">
+					<h3>Core Partners</h3>
+                    <div class="contact-grid">
+                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/bkkbn-small.png') }}" alt="" ></a>&nbsp;&nbsp;
+
+                        <a href="{{ URL::to('http://indonesia.unfpa.org/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/unfpa-small.png') }}" alt=""></a>&nbsp;&nbsp;
+                        <a href="{{ URL::to('https://www.usaid.gov/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/usaid-small.png') }}" alt="" height="70"></a>&nbsp;&nbsp;
+                        <div class="clearfix"></div>
+                    </div>
+ 				</div>
+                		    
+                <div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
 
 					<div class="footer">
 					<div class="container">

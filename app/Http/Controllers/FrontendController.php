@@ -67,6 +67,19 @@ class FrontendController extends Controller
 		return view('frontend.partnerpage', ['partners' => $partners]);
 	}
 
+	public function getCommitment()
+	{
+		$program 		= General::find(1);
+		$financial		= General::find(2);
+		$policy			= General::find(3);
+		$objective		= General::find(4);
+
+		return view('frontend.commitment',
+					compact('program','financial','policy','objective'
+							)
+				);
+	}
+
 	private function shortenText($text, $words_count)
 	{
 		if(str_word_count($text, 0) > $words_count){

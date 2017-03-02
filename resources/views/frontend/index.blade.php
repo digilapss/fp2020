@@ -36,51 +36,40 @@
 		
 	<div class="banner">
 		<div class="slider">
-			<section class="slider">
-				<div class="flexslider">
-					<ul class="slides">
-						<li>
-							<h2>Caption 1</h2>
-	                        <h5>sub caption 1</h5>
-	  	    			</li>
-	 	    			<li>
-							<h2>Caption 2</h2>
-							<h5>sub caption 2</h5>
-						</li>
-						<li>
-							<h2>Caption 3</h2>
-							<h5>sub caption 3</h5>
-						</li>
-						<li>
-							<h2>Caption 4</h2>
-							<h5>sub caption 4</h5>
-						</li>
-					</ul>
-				</div>
-			</section>
-
-	  		<script>window.jQuery || document.write('<script src="{{ URL::to("src/frontend/js/libs/jquery-1.7.min.js") }}">\x3C/script>')</script>
-	  		<!--FlexSlider-->
-	  		<script defer src="{{ URL::to('src/frontend/js/jquery.flexslider.js') }}"></script>
-			<script type="text/javascript">
-			   	$(function(){
-			      SyntaxHighlighter.all();
-			    });
-			    $(window).load(function(){
-			      $('.flexslider').flexslider({
-			        animation: "slide",
-			        start: function(slider){
-			          $('body').removeClass('loading');
-			        }
-			      });
-			    });
-	  		</script>
+			
 		</div>
 	</div>
 
 	<div class="about" id="about">
 		<div class="container">
 			<div class="about1 clock wow bounceIn">
+				<div class="row">
+				    <div class="offset-md-2 col-md-8">
+				        <div class="row">
+				            <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+				                <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
+				            </a>
+				            <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+				                <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
+				            </a>
+				            <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+				                <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid">
+				            </a>
+				        </div>
+				        <div class="row">
+				            <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+				                <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
+				            </a>
+				            <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+				                <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
+				            </a>
+				            <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+				                <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid">
+				            </a>
+				        </div>
+				    </div>
+				</div>
+				<!--
 				<div class="col-md-6 ">
 					<div class="about-top">
 						<h2>Strategy</h2>
@@ -97,6 +86,7 @@
 						<p class="para3">Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. integeralesuada.</p>     
 					</div>                 
 				</div>
+				-->
 				<div class="clearfix"> </div>
 			</div>
 		</div>  
@@ -116,7 +106,7 @@
 						<div class="content-right">
 							<h3>Program & Service Delivery</h3>
 							<p>{{ $programshort }}</p>
-							<button class="btn btn-info" data-toggle="modal" data-target="#myModal1">MORE</button>
+							<a href="{{ route('frontend.commitment') }}" class="btn btn-default">More</a>
 						</div>
 						<div class="clearfix"> </div>
 					</div>                                                      
@@ -126,7 +116,7 @@
 						<div class="content-right">
 							<h3>Financial <br> &nbsp;</h3>
 							<P>{{ $financialshort }}</P>
-							<button class="btn btn-info" data-toggle="modal" data-target="#myModal2">MORE</button>
+							<a href="{{ route('frontend.commitment') }}" class="btn btn-default">More</a>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -136,7 +126,7 @@
 						<div class="content-right">
 							<h3>Policy & Political <br> &nbsp;</h3>
 							<P>{{ $policyshort }}</P>
-							<button class="btn btn-info" data-toggle="modal" data-target="#myModal3">MORE</button>
+							<a href="{{ route('frontend.commitment') }}" class="btn btn-default">More</a>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -146,7 +136,7 @@
 							<div class="content-right">
 								<h3>Objective <br> &nbsp;</h3>
                                 <P>{{ $objectiveshort }}</P>
-                                <button class="btn btn-info" data-toggle="modal" data-target="#myModal4">MORE</button>
+                                <a href="{{ route('frontend.commitment') }}" class="btn btn-default">More</a>
                             </div>
 						<div class="clearfix"> </div>
 						</div>
@@ -162,6 +152,8 @@
                 <h3>UPCOMING EVENT</h3>
                 <br>
                 <center><a href="{{ route('frontend.event') }}" class="btn btn-default"> Show All Event</a></center>
+
+                <center><button data-toggle="modal" data-target="#myModal">MODAL</button></center>
             </div>
         </div>
     </div>
@@ -301,7 +293,7 @@
 	<div class="project" id="partner">
 		<div class="container">
             <div class="project-1 clock wow bounceIn">
-                <h3>Indonesia Familly Planning Partners</h3>
+                <h3>Indonesia Family Planning Partners</h3>
                 <br>
                 <center><a href="{{ route('frontend.partner')}}" class="btn btn-default"> Show All Partners</a></center>
             </div>
@@ -315,18 +307,18 @@
 				<div class="col-md-3 contact-top1">
 					<h3>Connect with us</h3>
                     <div class="contact-grid">
-                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/facebook.png') }}" alt="" height="100px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/twitter.png') }}" alt="" height="100px"></a>
+                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/facebook.png') }}" alt="" height="70px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/twitter.png') }}" alt="" height="70px"></a>
                         <div class="clearfix"></div>
                     </div>
  				</div>
 				<div class="col-md-9 contact-top1">
 					<h3>Core Partners</h3>
                     <div class="contact-grid">
-                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/bkkbn-small.png') }}" alt=""></a>&nbsp;&nbsp;
+                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/bkkbn-small.png') }}" alt="" ></a>&nbsp;&nbsp;
 
                         <a href="{{ URL::to('http://indonesia.unfpa.org/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/unfpa-small.png') }}" alt=""></a>&nbsp;&nbsp;
-                        <a href="{{ URL::to('https://www.usaid.gov/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/usaid-small.png') }}" alt=""></a>&nbsp;&nbsp;
+                        <a href="{{ URL::to('https://www.usaid.gov/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/usaid-small.png') }}" alt="" height="70"></a>&nbsp;&nbsp;
                         <div class="clearfix"></div>
                     </div>
  				</div>
@@ -335,98 +327,45 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.1.1/ekko-lightbox.js"></script>
+	<script>
+    	 $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+			    event.preventDefault();
+			    $(this).ekkoLightbox();
+			});
+    </script> 
 	
 
-	
-
-	<!-- Modal -->
-	<div id="myModal1" class="modal fade" role="dialog">
-	  <div class="modal-dialog">
-
-	    <!-- Modal content-->
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h4 class="modal-title">Program & Service Delivery</h4>
-	      </div>
-	      <div class="modal-body">
-	        <p>{{ $program->body }}</p>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-
-	  </div>
-	</div>
-
-	<!-- Modal -->
-	<div id="myModal2" class="modal fade" role="dialog">
-	  <div class="modal-dialog">
-
-	    <!-- Modal content-->
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h4 class="modal-title">Financial </h4>
-	      </div>
-	      <div class="modal-body">
-	        <p>{{ $financial->body }}</p>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-
-	  </div>
-	</div>
-
-	<!-- Modal -->
-	<div id="myModal3" class="modal fade" role="dialog">
-	  <div class="modal-dialog">
-
-	    <!-- Modal content-->
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h4 class="modal-title">Policy & Political</h4>
-	      </div>
-	      <div class="modal-body">
-	        <p>{{ $policy->body }}</p>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-
-	  </div>
-	</div>
-
-	<!-- Modal -->
-	<div id="myModal4" class="modal fade" role="dialog">
-	  <div class="modal-dialog">
-
-	    <!-- Modal content-->
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h4 class="modal-title">Objective</h4>
-	      </div>
-	      <div class="modal-body">
-	        <p>{{ $objective->body }}</p>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-
-	  </div>
-	</div>
-
-	
 @endsection
 
 @section('script')
+
+
+
 	<script type="text/javascript">
 		var token = "{{ Session::token() }}";
 	</script>

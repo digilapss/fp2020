@@ -36,6 +36,11 @@ Route::get('/partnerpage',[
 	'as' => 'frontend.partner'
 ]);
 
+Route::get('/commitment', [
+	'uses' => 'FrontendController@getCommitment',
+	'as' => 'frontend.commitment'
+]);
+
 Route::get('/admin/login', [
 	'uses' => 'AdminController@getLogin',
 	'as' => 'admin.login'
