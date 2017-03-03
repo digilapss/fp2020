@@ -297,9 +297,9 @@
 	<div class="project" id="partner">
 		<div class="container">
             <div class="project-1 clock wow bounceIn">
-                <h3>Indonesia Family Planning Partners</h3>
+                <h3>FP2020 Indonesia Working Group</h3>
                 <br>
-                <center><a href="{{ route('frontend.partner')}}" class="btn btn-default"> Show All Partners</a></center>
+                <center><a href="{{ route('frontend.partner')}}" class="btn btn-default"> Show</a></center>
             </div>
         </div>
 	</div>

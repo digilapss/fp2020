@@ -64,7 +64,7 @@ class PartnerController extends Controller
 			'name' => 'required|max:120'
 		]);
 
-		$partners = new Partner();
+		$partners = Partner::find($request['partner_id']);
 		$partners->name = $request['name'];
 		$partners->website = $request['website'];
 		$partners->narrative = $request['narrative'];
@@ -87,6 +87,8 @@ class PartnerController extends Controller
 		
 		return redirect()->route('admin.partner.index')->with(['success' =>  $request['name']. 
 			' succesfully updated']); 
+
+		
 	}
 
 	public function getDelete($partner_id)

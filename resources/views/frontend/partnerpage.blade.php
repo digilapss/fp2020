@@ -31,7 +31,7 @@
 	<div class="about" id="strategy">
 	<div class="container">
 		<div class="tabs-box clock wow bounceIn">
-					<center><h1>Indonesia Family Planning 2020 Partner</h1></center>
+					<center><h1>FP2020 Working Group</h1></center>
 					<br><br>
 					
 					@if(count($partners) == 0)

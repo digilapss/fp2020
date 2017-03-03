@@ -11,7 +11,7 @@
 		        	<div class="col-lg-10 col-md-offset-2">
 						@include('includes.info-box')
 					</div>
-		        	<form class="form form-horizontal" action="{{ route('admin.partner.update') }}" method="post">
+		        	<form class="form form-horizontal" action="{{ route('admin.partner.update') }}" method="post" enctype="multipart/form-data">
 					  	<div class=" {{ $errors->has('name') ? 'form-group has-error' : 'form-group'}} ">
 					        <label class="col-md-2 control-label">Name</label>
 					        <div class="col-md-10">
@@ -48,7 +48,7 @@
 					        	<button type="button" class="btn btn-default">Cancel</button>
 					        </a>
 					        <input type="hidden" value="{{ Session::token() }}" name="_token" />
-					        <input type="hidden" value="{{ $partner->id }}" name="document_id">
+					        <input type="hidden" value="{{ $partner->id }}" name="partner_id">
 					      </div>
 					    </div>
 					  </div>
