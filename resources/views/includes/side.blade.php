@@ -21,9 +21,9 @@
             <li><a href="{{ route('admin.about.view', ['about_id' => 2]) }}}">FP2020 in Indonesia</a></li>
             <li class="line"></li>
             <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i>-</li>
-            <li><a href="{{ route('admin.general.view', ['general_id' => 1]) }}">Country Committee</a></li>
-            <li><a href="{{ route('admin.general.view', ['general_id' => 2]) }}">Working Group</a></li>
-            <li><a href="{{ route('admin.general.view', ['general_id' => 3]) }}">Secretariate</a></li>
+            <li><a href="{{ route('admin.group.view', ['group_id' => 1]) }}">Country Committee</a></li>
+            <li><a href="{{ route('admin.group.view', ['group_id' => 2]) }}">Working Group</a></li>
+            <li><a href="{{ route('admin.group.view', ['group_id' => 3]) }}">Secretariate</a></li>
           </ul>
         </div>
       </li>

@@ -276,9 +276,9 @@ Route::group([
 		'uses' => 'PartnerController@getDelete',
 		'as' => 'admin.partner.delete'
 	]);
-	//End General Route
+	//End Partner Route
 
-	//Partner Route
+	//About Route
 	Route::get('/about/view/{about_id}',[
 		'uses' => 'AboutController@getView',
 		'as' => 'admin.about.view'
@@ -294,6 +294,56 @@ Route::group([
 		'as' => 'admin.about.update'
 	]);
 
-	//End General Route
+	//End About Route
+
+	//Group Route
+	Route::get('/group/view/{group_id}',[
+		'uses' => 'GroupController@getView',
+		'as' => 'admin.group.view'
+	]);
+
+	Route::get('/group/edit/{group_id}',[
+		'uses' => 'GroupController@getUpdate',
+		'as' => 'admin.group.edit'
+	]);
+
+	Route::post('/group/edit/update',[
+		'uses' => 'GroupController@postUpdate',
+		'as' => 'admin.group.update'
+	]);
+
+	Route::post('/group/edit/update',[
+		'uses' => 'GroupController@postUpdate',
+		'as' => 'admin.group.update'
+	]);
+
+		//Partner Route
+		Route::get('/group/member/create/{group_id}', [
+			'uses' => 'MemberController@getCreate',
+			'as' => 'admin.member.create'
+		]);
+
+		Route::post('/group/member/create', [
+			'uses' => 'MemberController@postCreate',
+			'as' => 'admin.member.post.create'
+		]);
+
+		Route::get('/group/member/edit/{member_id}',[
+			'uses' => 'MemberController@getUpdate',
+			'as' => 'admin.member.edit'
+		]);
+
+		Route::post('/group/member/edit/update',[
+			'uses' => 'MemberController@postUpdate',
+			'as' => 'admin.member.update'
+		]);
+
+		Route::get('/group/member/delete/{member_id}', [
+			'uses' => 'MemberController@getDelete',
+			'as' => 'admin.member.delete'
+		]);
+		//End General Route
+	//End Group Route
+
 	
 });
