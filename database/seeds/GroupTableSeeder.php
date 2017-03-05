@@ -32,6 +32,27 @@ class GroupTableSeeder extends Seeder
          $general->function = 'The London Summit on Family Planning brought together partners representing country governments, donors, multilateral agencies, civil society and private sector organisations around an ambitious goal: to provide an additional 120 million women in the world’s poorest countries with access to voluntary family planning by 2020. Developing country leaders and other partners made transformative financial, policy and delivery commitments and $2.6bn in donor financing was pledged to enable millions more girls and women to use family planning information, services and supplies.';
         $general->save();
 
+        $general = new \App\Group();
+        $general->id = 4;
+        $general->name = 'WG on National Rights-Based FP Strategy';
+        $general->role = 'The London Summit on Family Planning brought together partners representing country governments, donors, multilateral agencies, civil society and private sector organisations around an ambitious goal: to provide an additional 120 million women in the world’s poorest countries with access to voluntary family planning by 2020. Developing country leaders and other partners made transformative financial, policy and delivery commitments and $2.6bn in donor financing was pledged to enable millions more girls and women to use family planning information, services and supplies.';
+         $general->function = 'The London Summit on Family Planning brought together partners representing country governments, donors, multilateral agencies, civil society and private sector organisations around an ambitious goal: to provide an additional 120 million women in the world’s poorest countries with access to voluntary family planning by 2020. Developing country leaders and other partners made transformative financial, policy and delivery commitments and $2.6bn in donor financing was pledged to enable millions more girls and women to use family planning information, services and supplies.';
+        $general->save();
+
+        $general = new \App\Group();
+        $general->id = 5;
+        $general->name = 'WG on Rights & Empowerment';
+        $general->role = 'The London Summit on Family Planning brought together partners representing country governments, donors, multilateral agencies, civil society and private sector organisations around an ambitious goal: to provide an additional 120 million women in the world’s poorest countries with access to voluntary family planning by 2020. Developing country leaders and other partners made transformative financial, policy and delivery commitments and $2.6bn in donor financing was pledged to enable millions more girls and women to use family planning information, services and supplies.';
+         $general->function = 'The London Summit on Family Planning brought together partners representing country governments, donors, multilateral agencies, civil society and private sector organisations around an ambitious goal: to provide an additional 120 million women in the world’s poorest countries with access to voluntary family planning by 2020. Developing country leaders and other partners made transformative financial, policy and delivery commitments and $2.6bn in donor financing was pledged to enable millions more girls and women to use family planning information, services and supplies.';
+        $general->save();
+
+        $general = new \App\Group();
+        $general->id = 6;
+        $general->name = 'WG on Data';
+        $general->role = 'The London Summit on Family Planning brought together partners representing country governments, donors, multilateral agencies, civil society and private sector organisations around an ambitious goal: to provide an additional 120 million women in the world’s poorest countries with access to voluntary family planning by 2020. Developing country leaders and other partners made transformative financial, policy and delivery commitments and $2.6bn in donor financing was pledged to enable millions more girls and women to use family planning information, services and supplies.';
+         $general->function = 'The London Summit on Family Planning brought together partners representing country governments, donors, multilateral agencies, civil society and private sector organisations around an ambitious goal: to provide an additional 120 million women in the world’s poorest countries with access to voluntary family planning by 2020. Developing country leaders and other partners made transformative financial, policy and delivery commitments and $2.6bn in donor financing was pledged to enable millions more girls and women to use family planning information, services and supplies.';
+        $general->save();
+
 
         
 

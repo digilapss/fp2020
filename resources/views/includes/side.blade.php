@@ -22,8 +22,12 @@
             <li class="line"></li>
             <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i>-</li>
             <li><a href="{{ route('admin.group.view', ['group_id' => 1]) }}">Country Committee</a></li>
-            <li><a href="{{ route('admin.group.view', ['group_id' => 2]) }}">Working Group</a></li>
             <li><a href="{{ route('admin.group.view', ['group_id' => 3]) }}">Secretariate</a></li>
+            <li class="line"></li>
+            <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i>Working Group</li>
+            <li><a href="{{ route('admin.group.view', ['group_id' => 4]) }}">National Rights-Based FP Strategy</a></li>
+            <li><a href="{{ route('admin.group.view', ['group_id' => 5]) }}">Rights & Empowerment</a></li>
+            <li><a href="{{ route('admin.group.view', ['group_id' => 6]) }}">Data</a></li>
           </ul>
         </div>
       </li>

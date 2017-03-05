@@ -93,8 +93,9 @@
 						@else
 							@foreach($docugroups as $docugroup)
 								<li>
+									<a href="{{ asset("documents/docugroup/$docugroup->file") }}">
 									[{{ $docugroup->category }}] - {{ $docugroup->name }} 
-
+									</a>
 									<a href="{{ route('admin.docugroup.edit', ['docugroup_id' => $docugroup->id]) }}">Edit</a>
 									<a href="{{ route('admin.docugroup.delete', ['docugroup_id' => $docugroup->id]) }}">Delete</a>
 								</li>
