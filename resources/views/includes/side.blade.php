@@ -7,14 +7,26 @@
   </div>
   <div class="sidebar-menu">
     <ul class="sidebar-nav">
-      <li {{ Request::is('admin') ? 'class=active' : '' }}>
-        <a href="{{ route('admin.index') }}">
+      <li class="{{ Request::is('admin/about*') ? 'dropdown active' : 'dropdown' }}" >
+        <a class="dropdown-toggle" data-toggle="dropdown">
           <div class="icon">
-            <i class="fa fa-tasks" aria-hidden="true"></i>
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
           </div>
-          <div class="title">Dashboard</div>
+          <div class="title">About Us</div>
         </a>
-        </li>
+        <div class="dropdown-menu">
+          <ul>
+            <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> About Us</li>
+            <li><a href="{{ route('admin.about.view', ['about_id' => 1]) }}">Global FP2020</a></li>
+            <li><a href="{{ route('admin.about.view', ['about_id' => 2]) }}}">FP2020 in Indonesia</a></li>
+            <li class="line"></li>
+            <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i>-</li>
+            <li><a href="{{ route('admin.general.view', ['general_id' => 1]) }}">Country Committee</a></li>
+            <li><a href="{{ route('admin.general.view', ['general_id' => 2]) }}">Working Group</a></li>
+            <li><a href="{{ route('admin.general.view', ['general_id' => 3]) }}">Secretariate</a></li>
+          </ul>
+        </div>
+      </li>
       <li class="{{ Request::is('admin/general*') ? 'dropdown active' : 'dropdown' }}" >
         <a class="dropdown-toggle" data-toggle="dropdown">
           <div class="icon">

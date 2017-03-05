@@ -277,5 +277,23 @@ Route::group([
 		'as' => 'admin.partner.delete'
 	]);
 	//End General Route
+
+	//Partner Route
+	Route::get('/about/view/{about_id}',[
+		'uses' => 'AboutController@getView',
+		'as' => 'admin.about.view'
+	]);
+
+	Route::get('/about/edit/{about_id}',[
+		'uses' => 'AboutController@getUpdate',
+		'as' => 'admin.about.edit'
+	]);
+
+	Route::post('/about/edit/update',[
+		'uses' => 'AboutController@postUpdate',
+		'as' => 'admin.about.update'
+	]);
+
+	//End General Route
 	
 });
