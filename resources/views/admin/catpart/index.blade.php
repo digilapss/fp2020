@@ -11,11 +11,11 @@
 		<div class="col-md-12">
 		    <div class="card">
 		        <div class="card-header">
-					<h1>Partners</h1>
+					<h1>Partner Category</h1>
 		       	</div>
 		       	<div class="card-body">
-		       		<a href="{{ route('admin.partner.create') }}">
-		        		<button class="btn btn-primary">Add Partners</button>
+		       		<a href="{{ route('admin.catpart.create') }}">
+		        		<button class="btn btn-primary">Add Category</button>
 		        	</a>
 
 		        </div>
@@ -33,34 +33,31 @@
 		        	<table class="datatable table table-striped primary" cellspacing="0" width="100%">
 					    <thead>
 					        <tr>
-					        	<th>Name</th>
-					        	<th>Category</th>
-					            <th>Website</th>
-					            <th>Logo</th>
-					            <th>Narrative</th>
+					            <th>Name</th>
 					            <th>Action</th>
 					        </tr>
 					    </thead>
 					    <tbody>
-					    @if(count($partners) == 0)
+					    @if(count($categories) == 0)
 					    	<tr>
-					    		<td colspan="5"><center>No Partner</center></td>
+					    		<td colspan="5"><center>No Category</center></td>
 					    	</tr>
 						@else
-							@foreach($partners as $partner)
+							@foreach($categories as $category)
 								<tr>
-									<td>{{ $partner->name }}</td>
-									<td>{{ $partner->catpart->title }}</td>
-									<td>{{ $partner->website  }}</td>
-									<td>{{ $partner->logo }}</td>
-									<td>{!! $partner->narrative !!}</td>
+									<td>{{ $category->title }}</td>
 									<td>
-										<a href="{{ route('admin.partner.edit', ['patner_id' => $partner->id]) }}" class="btn btn-xs btn-info">
+										<a href="{{ route('admin.catpart.edit', ['category_id' => $category->id]) }}" class="btn btn-xs btn-info">
 											Edit
 										</a>
-										<a href="{{ route('admin.partner.delete', ['patner_id' => $partner->id]) }}" class="btn btn-xs btn-danger">
-											Delete
-										</a>
+										
+										@if($category->id != 1 && $category->id != 2 && $category->id != 3 && $category->id != 4 && $category->id != 5)
+
+											<a href="{{ route('admin.catpart.delete', ['category_id' => $category->id]) }}" class="btn btn-xs btn-danger">
+												Delete
+											</a>
+
+										@endif
 									</td>
 								</tr>
 							@endforeach

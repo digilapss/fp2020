@@ -8,6 +8,9 @@ use App\Document;
 use App\Category;
 use App\Uevent;
 use App\Partner;
+use App\Group;
+use App\Member;
+use App\Docugroup;
 
 class FrontendController extends Controller
 {
@@ -32,11 +35,14 @@ class FrontendController extends Controller
 		$ppts 		= Document::where('category_id', '=', 4)->orderBy('date', 'desc')->take(2)->get();
 		$tors 		= Document::where('category_id', '=', 5)->orderBy('date', 'desc')->take(2)->get();
 
+		//Uevent
+		$uevents = Uevent::orderBy('date','desc')->take(4)->get();
+
 		
 		return view('frontend.index',
 					compact('program','financial','policy','objective',
 							'programshort','financialshort', 'policyshort','objectiveshort',
-							'strategies', 'workplans', 'reports', 'ppts', 'tors')
+							'strategies', 'workplans', 'reports', 'ppts', 'tors', 'uevents')
 				);
 	}
 
@@ -64,7 +70,15 @@ class FrontendController extends Controller
 	{
 		$partners = Partner::all();
 
-		return view('frontend.partnerpage', ['partners' => $partners]);
+		$ones		= Partner::where('catpart_id', '=', 1)->get();
+		$twos 		= Partner::where('catpart_id', '=', 2)->get();
+		$threes 	= Partner::where('catpart_id', '=', 3)->get();
+		$fours 		= Partner::where('catpart_id', '=', 4)->get();
+		$fives 		= Partner::where('catpart_id', '=', 5)->get();
+
+		return view('frontend.partnerpage',
+					compact('ones', 'twos', 'threes', 'fours', 'fives')
+				);
 	}
 
 	public function getCommitment()
@@ -76,6 +90,19 @@ class FrontendController extends Controller
 
 		return view('frontend.commitment',
 					compact('program','financial','policy','objective'
+							)
+				);
+	}
+
+	public function getGroup($group_id)
+	{
+		$group = Group::find($group_id);
+		$members = Member::where('group_id', '=', $group_id)->get();
+		$docugroups = Docugroup::where('group_id', '=', $group_id)->orderBy('date', 'desc')->get();
+
+
+		return view('frontend.group',
+					compact('group', 'members', 'docugroups'
 							)
 				);
 	}

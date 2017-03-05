@@ -31,34 +31,56 @@
 	<div class="about" id="strategy">
 	<div class="container">
 		<div class="tabs-box clock wow bounceIn">
-					<center><h1>Indonesia Family Planning 2020 Commitment</h1></center>
+
+					<center><h1>{{ $group->name }}</h1></center>
+					<br>
+
+					<button class="btn btn-info btn-block btn-lg">ROLES</button>
+					<br>
+					<p>{{ $group->role }}</p>
+
 					<br><br>
 
-					<h2>{{ $program->title }}</h2>
-					<p>{{ $program->body }}</p>
-
+					<button class="btn btn-info btn-block btn-lg">FUNCTION</button>
 					<br>
+					<p>{{ $group->function }}</p>
+
+					<br><br>
+
+					<button class="btn btn-info btn-block btn-lg">MEMBERS</button>
 					<br>
-					
-					<h2>{{ $financial->title }}</h2>
-					<p>{{ $financial->body }}</p>
+					@if(count($members) == 0)
+						<ul>
+							<li>No Members</li>
+						</ul>
+					@else
+						<ul>
+							@foreach($members as $member)
+								<li>{{ $member->name }}, {{ $member->position}}</li>
+							@endforeach
+						</ul>
+					@endif
+					<br><br>
 
+					<button class="btn btn-info btn-block btn-lg">DOCUMENT</button>
 					<br>
-					<br>
+					@if(count($docugroups) == 0)
+					    <ul>
+					    	<li>No Document</li>
+					    </ul>
+					@else
+						@foreach($docugroups as $docugroup)
+							<ul>
+								<li>
+									<a href="{{ asset("documents/docugroup/$docugroup->file") }}">
+									[{{ $docugroup->category }}] - {{ $docugroup->date }} - {{ $docugroup->name }} 
+									</a>
+								</li>
+							</ul>
+						@endforeach
+					@endif
+					<br><br>
 
-					<h2>{{ $policy->title }}</h2>
-					<p>{{ $policy->body }}</p>
-
-					<br>
-					<br>
-
-					<h2>{{ $objective->title }}</h2>
-					<p>{{ $objective->body }}</p>
-
-					
-
-					
-					
 		</div>
 	</div>
 	</div>

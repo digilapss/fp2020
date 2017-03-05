@@ -5,16 +5,15 @@
 		<div class="container">
 			<div class="header clock wow bounceIn">
 				
-				<h1><img src="{{ URL::to('src/frontend/images/fp2020-logo.png') }}" width="80px">&nbsp;&nbsp;<a href="index.html">INDONESIA FAMILY PLANNING 2020</a></h1>
+				<h1><img src="{{ URL::to('src/frontend/images/fp2020-logo.png') }}" width="80px">&nbsp;&nbsp;<a href="#">INDONESIA FAMILY PLANNING 2020</a></h1>
 				<div class="nav-top">
 					<span class="menu"><img src="{{ URL::to('src/frontend/images/menu-icon.png') }}" alt=""></span>
 					<ul class="navgation">
 						<li><a class="active" href="#home" class="scroll">HOME</a></li>
-						<li><a href="#about" class="scroll">HOW WE DO IT</a></li>
+						<li><a href="#about" class="scroll">ABOUT US</a></li>
 						<li><a href="#services" class="scroll">COMMITMENT</a></li>
 						<li><a href="#event" class="scroll">EVENT</a></li>
-						<li><a href="#project" class="scroll">WORKING DOCUMENT</a></li>
-						<li><a href="#project" class="scroll">NEWS & PHOTO</a></li>
+						<li><a href="#project" class="scroll">DOCUMENT</a></li>
 						<li><a href="#partner" class="scroll">PARTNER</a></li>
 					</ul>
 
@@ -36,6 +35,44 @@
 		
 	<div class="banner">
 		<div class="slider">
+			<section class="slider">
+                <div class="flexslider">
+                    <ul class="slides">
+                     	@if(count($uevents) == 0)
+					    	<li>
+	    	                	<h2>No Event</h2>
+	    	                	<h5>-</h5>
+		                    </li>
+	                        
+						@else
+							@foreach($uevents as $uevent)
+								<li>
+		    	                	<h2>{{ $uevent->title }}</h2>
+		                        	<b><h5>{{ $uevent->date }} at {{ $uevent->place }}</h5></b>
+		                        	<a href="{{ route('frontend.event') }}"><h5>Show All Event</h5></a>
+				  	    		</li>
+							@endforeach
+						@endif
+					</ul>
+		        </div>
+      		</section>
+  
+  		 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+		  <!--FlexSlider-->
+		  <script defer src="src/frontend/js/jquery.flexslider.js"></script>
+		  <script type="text/javascript">
+		    $(function(){
+		      SyntaxHighlighter.all();
+		    });
+		    $(window).load(function(){
+		      $('.flexslider').flexslider({
+		        animation: "slide",
+		        start: function(slider){
+		          $('body').removeClass('loading');
+		        }
+		      });
+		    });
+		  </script>
 			
 		</div>
 	</div>
@@ -44,7 +81,22 @@
 	<div class="about" id="about">
 		<div class="container">
 			<div class="about1 clock wow bounceIn">
-			<center><h1><b>How we do it</b></h1></center>
+				<div class="col-md-6 ">
+                    <div class="about-top">
+                        <h2>MORBI IN SEM LOREM PLACERAT ORNARE PELLENTE</h2>
+                        <h3>EUISMOD IN,PHARETRA ULTRICIES CRASCONSEQUAT VAVIMUS SUP SOMPURKOI VARSIT</h3>
+                        <a href="#">MORE INFO</a>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-bottom">
+                        <a href="#"><p class="para1">Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet,lectus arcu pulvinar ricus lorem ipsum dolor</p></a> 
+                        <p class="para2">vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis , adipiscing varius, adipiscing in,lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus.</p> 
+                        <p class="para3">Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. integeralesuada.</p>     
+                    </div>                 
+                </div>
+                <div class="clearfix"> </div>
 			<br>
 				<div class="row">
 				    <div class="demo-gallery">
@@ -153,7 +205,7 @@
     <div class="project" id="event">
         <div class="container">
             <div class="project-1 clock wow bounceIn">
-                <h3>UPCOMING EVENT</h3>
+                <h3>EVENT</h3>
                 <br>
                 <center><a href="{{ route('frontend.event') }}" class="btn btn-default"> Show All Event</a></center>
 
@@ -166,7 +218,7 @@
 	<div class="about" id="project">
 		<div class="container">
 			<div class="tabs-box clock wow bounceIn">
-			<center><h1><b>Working Documents</b></h1></center>
+			<center><h1><b>Documents</b></h1></center>
 			<br>
 			<ul class="tabs-menu">
 				<li><a href="#tab1"><img src="src/frontend/images/f.png" alt="">Strategy</a></li>
@@ -182,7 +234,8 @@
 				<div id="tab1" class="tab-grid">
 					<div class="col-md-12 line1">
 						@if(count($strategies) == 0)
-					    	 <center>No Document</center>
+					    	 <center><h1>No Document</h1></center>
+					    	 <br>
 						@else
 							@foreach($strategies as $strategy)
 								<blockquote>
@@ -297,7 +350,7 @@
 	<div class="project" id="partner">
 		<div class="container">
             <div class="project-1 clock wow bounceIn">
-                <h3>FP2020 Indonesia Working Group</h3>
+                <h3>Indonesia FP2020 Partners</h3>
                 <br>
                 <center><a href="{{ route('frontend.partner')}}" class="btn btn-default"> Show</a></center>
             </div>
@@ -311,13 +364,13 @@
 				<div class="col-md-3 contact-top1">
 					<h3>Connect with us</h3>
                     <div class="contact-grid">
-                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/facebook.png') }}" alt="" height="70px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/twitter.png') }}" alt="" height="70px"></a>
+                        <a href="#" target="_blank"><img src="{{ URL::to('src/frontend/images/facebook.png') }}" alt="" height="70px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#" target="_blank"><img src="{{ URL::to('src/frontend/images/twitter.png') }}" alt="" height="70px"></a>
                         <div class="clearfix"></div>
                     </div>
  				</div>
 				<div class="col-md-9 contact-top1">
-					<h3>Core Partners</h3>
+					<h3>Focal Points</h3>
                     <div class="contact-grid">
                         <a href="{{ URL::to('http://www.bkkbn.go.id/') }}" target="_blank"><img src="{{ URL::to('src/frontend/images/bkkbn-small.png') }}" alt="" ></a>&nbsp;&nbsp;
 

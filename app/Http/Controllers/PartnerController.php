@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Partner;
+use App\Catpart;
 
 class PartnerController extends Controller
 {
@@ -16,7 +17,8 @@ class PartnerController extends Controller
 
 	public function getCreate()
 	{
-		return view('admin.partner.create');
+		$catparts = Catpart::all();
+		return view('admin.partner.create', ['catparts' => $catparts]);
 	}
 
 	public function postCreate(Request $request)
@@ -27,6 +29,7 @@ class PartnerController extends Controller
 
 		$partners = new Partner();
 		$partners->name = $request['name'];
+		$partners->catpart_id = $request['catpart_id'];
 		$partners->website = $request['website'];
 		$partners->narrative = $request['narrative'];
 
@@ -51,11 +54,12 @@ class PartnerController extends Controller
 
 	public function getUpdate($partner_id)
 	{
+		$catparts = Catpart::all();
 		$partners = Partner::find($partner_id);
 		if(!$partners){
 			return redirect()->route('admin.partner.index')->with(['fail' => 'Partner not Found!']);
 		}
-		return view('admin.partner.edit', ['partner' => $partners]);
+		return view('admin.partner.edit', ['partner' => $partners], ['catparts' => $catparts]);
 	}
 
 	public function postUpdate(Request $request)
@@ -66,6 +70,7 @@ class PartnerController extends Controller
 
 		$partners = Partner::find($request['partner_id']);
 		$partners->name = $request['name'];
+		$partners->catpart_id = $request['catpart_id'];
 		$partners->website = $request['website'];
 		$partners->narrative = $request['narrative'];
 

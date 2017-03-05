@@ -41,6 +41,11 @@ Route::get('/commitment', [
 	'as' => 'frontend.commitment'
 ]);
 
+Route::get('/group/{group_id}',[
+	'uses' => 'FrontendController@getGroup',
+	'as' => 'frontend.group'
+]);
+
 Route::get('/admin/login', [
 	'uses' => 'AdminController@getLogin',
 	'as' => 'admin.login'
@@ -50,6 +55,8 @@ Route::post('/admin/login/post', [
 	'uses' => 'AdminController@postLogin',
 	'as' => 'admin.login.post'
 ]);
+
+
 
 Route::group([
 	'prefix' => '/admin',
@@ -371,6 +378,42 @@ Route::group([
 		]);
 		//End General Route
 	//End Group Route
+
+	//Caategory Partner
+	Route::get('/catpart',[
+		'uses' => 'CatpartController@getIndex',
+		'as' => 'admin.catpart.index'
+	]);
+
+	Route::get('/catpart/create', [
+		'uses' => 'CatpartController@getCreate',
+		'as' => 'admin.catpart.create'
+	]);
+
+	Route::post('/catpart/create', [
+		'uses' => 'CatpartController@postCreate',
+		'as' => 'admin.catpart.post.create'
+	]);
+
+	Route::get('/catpart/view/{catpart_id}',[
+		'uses' => 'CatpartController@getSingle',
+		'as' => 'admin.catpart.view'
+	]);
+
+	Route::get('/catpart/edit/{catpart_id}',[
+		'uses' => 'CatpartController@getUpdate',
+		'as' => 'admin.catpart.edit'
+	]);
+
+	Route::post('/catpart/edit/update',[
+		'uses' => 'CatpartController@postUpdate',
+		'as' => 'admin.catpart.update'
+	]);
+
+	Route::get('/catpart/delete/{catpart_id}', [
+		'uses' => 'CatpartController@getDelete',
+		'as' => 'admin.catpart.delete'
+	]);
 
 	
 });

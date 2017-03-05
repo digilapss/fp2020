@@ -67,13 +67,19 @@
           <div class="title">Document</div>
         </a>
       </li>
-      <li {{ Request::is('admin/partner*') ? 'class=active' : '' }}>
-        <a href="{{ route('admin.partner.index') }}">
+      <li class="{{ Request::is('admin/partner*') ? 'dropdown active' : 'dropdown' }}" >
+        <a class="dropdown-toggle" data-toggle="dropdown">
           <div class="icon">
             <i class="fa fa-cube" aria-hidden="true"></i>
           </div>
           <div class="title">Partner</div>
         </a>
+        <div class="dropdown-menu">
+          <ul>
+            <li><a href="{{ route('admin.catpart.index') }}">Partner Category</a></li>
+            <li><a href="{{ route('admin.partner.index') }}">Partner List</a></li>
+          </ul>
+        </div>
       </li>
       
     </ul>

@@ -18,6 +18,16 @@
                               <input type="text" class="form-control" placeholder="" id="name" name="name" value="{{ Request::old('name') }}">
                             </div>
                         </div>
+                        <div class=" {{ $errors->has('catpart_id') ? 'form-group has-error' : 'form-group'}} ">
+                            <label class="col-md-2 control-label">Category</label>
+                            <div class="col-md-4">
+                              <select class="select2" name="catpart_id">
+                                    @foreach($catparts as $catpart)
+                                        <option value="{{ $catpart->id }}">{{ $catpart->title }}</option>
+                                    @endforeach
+                               </select>
+                            </div>
+                        </div>
                         <div class=" {{ $errors->has('website') ? 'form-group has-error' : 'form-group'}} ">
                             <label class="col-md-2 control-label">Website</label>
                             <div class="col-md-10">
