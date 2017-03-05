@@ -10,4 +10,9 @@ class Group extends Model
     {
     	return $this->hasMany('App\Member');
     }
+
+    public function Docugroup()
+    {
+    	return $this->hasMany('App\Docugroup');
+    }
 }

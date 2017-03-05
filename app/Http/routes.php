@@ -343,6 +343,33 @@ Route::group([
 			'as' => 'admin.member.delete'
 		]);
 		//End General Route
+
+		//Partner Route
+		Route::get('/group/docugroup/create/{group_id}', [
+			'uses' => 'DocugroupController@getCreate',
+			'as' => 'admin.docugroup.create'
+		]);
+
+		Route::post('/group/docugroup/create', [
+			'uses' => 'DocugroupController@postCreate',
+			'as' => 'admin.docugroup.post.create'
+		]);
+
+		Route::get('/group/docugroup/edit/{docugroup_id}',[
+			'uses' => 'DocugroupController@getUpdate',
+			'as' => 'admin.docugroup.edit'
+		]);
+
+		Route::post('/group/docugroup/edit/update',[
+			'uses' => 'DocugroupController@postUpdate',
+			'as' => 'admin.docugroup.update'
+		]);
+
+		Route::get('/group/docugroup/delete/{docugroup_id}', [
+			'uses' => 'DocugroupController@getDelete',
+			'as' => 'admin.docugroup.delete'
+		]);
+		//End General Route
 	//End Group Route
 
 	

@@ -77,7 +77,34 @@
 				</div>
 		    </div>
 		</div>
-	</div
+
+		<div class="col-md-6">
+		    <div class="card">
+		        <div class="card-header">
+		       		<a href="{{ route('admin.docugroup.create', ['group_id' => $groups->id]) }}">
+		        		<button class="btn btn-primary btn-xs">Add Document</button>
+		        	</a>
+		       	</div>
+		        <div class="card-body">
+		        	Documents
+		        	<ul>
+		        		 @if(count($docugroups) == 0)
+					    	<li>No Document</li>
+						@else
+							@foreach($docugroups as $docugroup)
+								<li>
+									[{{ $docugroup->category }}] - {{ $docugroup->name }} 
+
+									<a href="{{ route('admin.docugroup.edit', ['docugroup_id' => $docugroup->id]) }}">Edit</a>
+									<a href="{{ route('admin.docugroup.delete', ['docugroup_id' => $docugroup->id]) }}">Delete</a>
+								</li>
+							@endforeach
+						@endif
+		        	</ul>
+				</div>
+		    </div>
+		</div>
+	</div>
 @endsection
 
 @section('script')
