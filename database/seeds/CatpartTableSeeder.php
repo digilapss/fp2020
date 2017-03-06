@@ -13,12 +13,12 @@ class CatpartTableSeeder extends Seeder
     {
         $general = new \App\Catpart();
         $general->id = 1;
-        $general->title = 'Ministries and Govermental Institutions';
+        $general->title = 'Ministries and Government Institutions';
         $general->save();
 
         $general = new \App\Catpart();
         $general->id = 2;
-        $general->title = 'CSOs: NGOs, Academia';
+        $general->title = 'Professional Organizations';
         $general->save();
        
         $general = new \App\Catpart();
@@ -28,12 +28,17 @@ class CatpartTableSeeder extends Seeder
 
         $general = new \App\Catpart();
         $general->id = 4;
-        $general->title = 'INGOs';
+        $general->title = 'NGO/Civil Society Organizations';
         $general->save();
 
         $general = new \App\Catpart();
         $general->id = 5;
-        $general->title = 'Donors';
+        $general->title = 'Academia';
+        $general->save();
+
+         $general = new \App\Catpart();
+        $general->id = 6;
+        $general->title = 'International Development Partners';
         $general->save();
     }
 }

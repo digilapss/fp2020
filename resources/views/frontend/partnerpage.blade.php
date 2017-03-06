@@ -34,15 +34,14 @@
 			<center><h1><b>Partners</b></h1></center>
 			<br>
 			<ul class="tabs-menu">
-				<li><a href="#tab1">Ministries and Goverment</a></li>
-				<li><a href="#tab2">CSOs: NGOs, Academia</a></li>
+				<li><a href="#tab1">Ministries and Government Institutions</a></li>
+				<li><a href="#tab2">Professional Organizations</a></li>
 				<li><a href="#tab3">Private Sector</a></li>
-				<li><a href="#tab4">INGOs</a></li>
-				<li><a href="#tab5">Donors</a></li>
+				<li><a href="#tab4">NGO/Civil Society Organizations</a></li>
+				<li><a href="#tab5">Academia</a></li>
+				<li><a href="#tab6">International Development Partners</a></li>
 			</ul>
 			<div class="clearfix"> </div>
-
-			<div class="tab-grids">
 
 				<div id="tab1" class="tab-grid">
 					<div class="col-md-12 line1">
@@ -213,7 +212,43 @@
 						@endif
 					</div>
 				</div>
-			
+
+				<div id="tab6" class="tab-grid">
+					<div class="col-md-12 line1">
+						@if(count($sixs) == 0)
+					    	 <center>No Partner</center>
+						@else
+							@foreach($sixs as $one)
+								<div class="row">
+								<div class="col-md-3">
+									<img src="{{ URL::to("partner/$one->logo") }}" width="200px">
+								</div>
+								<div class="col-md-9">
+									<table>
+										<tr>
+											<td><h2>{{ $one->name }}</h2></td>
+										</tr>
+										<tr>
+											<td>{{ $one->website }}</td>
+										</tr>
+										<tr>
+											<td>&nbsp;</td>
+										</tr>
+										<tr>
+											<td colspan="3">{{ $one->narrative }}</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+
+							<br><br>
+							@endforeach
+						@endif
+					</div>
+				</div>
+				
+				
+
 			</div>
 			</div>
 		</div>

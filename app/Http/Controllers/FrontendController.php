@@ -11,6 +11,7 @@ use App\Partner;
 use App\Group;
 use App\Member;
 use App\Docugroup;
+use App\About;
 
 class FrontendController extends Controller
 {
@@ -38,11 +39,19 @@ class FrontendController extends Controller
 		//Uevent
 		$uevents = Uevent::orderBy('date','desc')->take(4)->get();
 
+		//about
+		$global		= About::find(1);
+		$indonesia 	= About::find(2);
+
+		$globalshort = $this->shortenText($global->description, 23);
+		$indonesiashort = $this->shortenText($indonesia->description, 25);
+
 		
 		return view('frontend.index',
 					compact('program','financial','policy','objective',
 							'programshort','financialshort', 'policyshort','objectiveshort',
-							'strategies', 'workplans', 'reports', 'ppts', 'tors', 'uevents')
+							'strategies', 'workplans', 'reports', 'ppts', 'tors', 'uevents',
+							'global', 'indonesia', 'globalshort', 'indonesiashort')
 				);
 	}
 
@@ -75,9 +84,10 @@ class FrontendController extends Controller
 		$threes 	= Partner::where('catpart_id', '=', 3)->get();
 		$fours 		= Partner::where('catpart_id', '=', 4)->get();
 		$fives 		= Partner::where('catpart_id', '=', 5)->get();
+		$sixs		= Partner::where('catpart_id', '=', 6)->get();
 
 		return view('frontend.partnerpage',
-					compact('ones', 'twos', 'threes', 'fours', 'fives')
+					compact('ones', 'twos', 'threes', 'fours', 'fives', 'sixs')
 				);
 	}
 
@@ -105,6 +115,20 @@ class FrontendController extends Controller
 					compact('group', 'members', 'docugroups'
 							)
 				);
+	}
+
+	public function getAbout($about_id)
+	{
+		$abouts		= About::find($about_id);
+		$group     = Group::find(3);
+
+		$wg1 = Group::find(4);
+		$wg2 = Group::find(5);
+		$wg3 = Group::find(6);
+
+		
+		return view('frontend.about', compact('abouts', 'wg1', 'wg2', 'wg3','group'));
+
 	}
 
 	private function shortenText($text, $words_count)

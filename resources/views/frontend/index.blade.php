@@ -81,22 +81,28 @@
 	<div class="about" id="about">
 		<div class="container">
 			<div class="about1 clock wow bounceIn">
-				<div class="col-md-6 ">
-                    <div class="about-top">
-                        <h2>MORBI IN SEM LOREM PLACERAT ORNARE PELLENTE</h2>
-                        <h3>EUISMOD IN,PHARETRA ULTRICIES CRASCONSEQUAT VAVIMUS SUP SOMPURKOI VARSIT</h3>
-                        <a href="#">MORE INFO</a>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="about-bottom">
-                        <a href="#"><p class="para1">Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet,lectus arcu pulvinar ricus lorem ipsum dolor</p></a> 
-                        <p class="para2">vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis , adipiscing varius, adipiscing in,lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus.</p> 
-                        <p class="para3">Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. integeralesuada.</p>     
-                    </div>                 
-                </div>
-                <div class="clearfix"> </div>
+				<center><h1>About Us</h1></center>
+				<br>
+				<div class="row">
+					<div class="col-md-6 ">
+	                    
+						<h2 align="right">{{ $global->name }}</h2>
+						<p align="right">{{ $globalshort }}
+						<br><br>
+						<a href="{{ route('frontend.about', ['about_id' => $global->id ]) }}" class="btn btn-info">More Info</a>
+						</p>
+	                </div>
+	                <div class="col-md-6">
+	                	<h2 align="left">{{ $indonesia->name }}</h2>
+						<p align="left">{{ $indonesiashort }}</p>
+	                    <br>
+						<a href="{{ route('frontend.about', ['about_id' => $indonesia->id ]) }}" class="btn btn-info">More Info</a>      
+	                </div>
+	                <div class="clearfix"> </div>
+	            </div>
+	            <div>
+	            	
+	            </div>
 			<br>
 				<div class="row">
 				    <div class="demo-gallery">

@@ -46,6 +46,11 @@ Route::get('/group/{group_id}',[
 	'as' => 'frontend.group'
 ]);
 
+Route::get('/about/{about_id}',[
+	'uses' => 'FrontendController@getAbout',
+	'as' => 'frontend.about'
+]);
+
 Route::get('/admin/login', [
 	'uses' => 'AdminController@getLogin',
 	'as' => 'admin.login'
