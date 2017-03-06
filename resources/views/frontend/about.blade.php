@@ -54,6 +54,39 @@
 
 							</li>
 						</ul>
+
+						<br>
+						<button class="btn btn-info btn-block btn-lg">Country Committee</button>
+						<br>
+						Members:
+						@if(count($members) == 0)
+							<ul>
+								<li>No Members</li>
+							</ul>
+						@else
+							<ul>
+								@foreach($members as $member)
+									<li>{{ $member->name }}, {{ $member->position}}</li>
+								@endforeach
+							</ul>
+						@endif
+						<br>
+						Document:
+						@if(count($docugroups) == 0)
+						    <ul>
+						    	<li>No Document</li>
+						    </ul>
+						@else
+							@foreach($docugroups as $docugroup)
+								<ul>
+									<li>
+										<a href="{{ asset("documents/docugroup/$docugroup->file") }}">
+										[{{ $docugroup->category }}] - {{ $docugroup->date }} - {{ $docugroup->name }} 
+										</a>
+									</li>
+								</ul>
+							@endforeach
+						@endif
 					@endif
 		</div>
 	</div>

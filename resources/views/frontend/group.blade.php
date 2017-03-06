@@ -32,7 +32,7 @@
 	<div class="container">
 		<div class="tabs-box clock wow bounceIn">
 
-					<center><h1>{{ $group->name }}</h1></center>
+					<center><h1>Working Group on {{ $group->name }}</h1></center>
 					<br>
 
 					<button class="btn btn-info btn-block btn-lg">ROLES</button>

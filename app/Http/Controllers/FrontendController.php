@@ -122,12 +122,15 @@ class FrontendController extends Controller
 		$abouts		= About::find($about_id);
 		$group     = Group::find(3);
 
+		$members = Member::where('group_id', '=', 1)->get();
+		$docugroups = Docugroup::where('group_id', '=', 1)->orderBy('date', 'desc')->get();
+
 		$wg1 = Group::find(4);
 		$wg2 = Group::find(5);
 		$wg3 = Group::find(6);
 
 		
-		return view('frontend.about', compact('abouts', 'wg1', 'wg2', 'wg3','group'));
+		return view('frontend.about', compact('abouts', 'wg1', 'wg2', 'wg3','group', 'members', 'docugroups'));
 
 	}
 

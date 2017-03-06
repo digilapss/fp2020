@@ -100,10 +100,27 @@
 	                </div>
 	                <div class="clearfix"> </div>
 	            </div>
-	            <div>
-	            	
+
+	           	<br><br>
+	           	<center><h1>Working Groups</h1></center>
+	           	<br>
+	            <div class="row">
+					
+	                <div class="col-md-12">
+	                	<center>
+						<a href="{{ route('frontend.group', ['group_id' => 4 ]) }}" class="btn btn-primary btn-lg" style="width: 280px">National Right-Based FP Strategy</a>
+						
+						<a href="{{ route('frontend.group', ['group_id' => 5 ]) }}" class="btn btn-primary btn-lg" style="width: 280px">Rights & Empowerment</a>
+						
+						<a href="{{ route('frontend.group', ['group_id' => 6 ]) }}" class="btn btn-primary btn-lg" style="width: 280px">Data</a>
+						</center>   
+	                </div>
+	                 <br><br>
+	                <div class="clearfix"> </div>
 	            </div>
-			<br>
+
+	            
+			<br><br><br>
 				<div class="row">
 				    <div class="demo-gallery">
 		            <ul id="lightgallery" class="list-unstyled row">
