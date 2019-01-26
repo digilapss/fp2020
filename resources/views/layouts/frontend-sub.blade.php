@@ -62,6 +62,10 @@
                 <div class="mdl-logo">&copy; Indonesia FP2020. Design: <a href="https://templateflip.com/" target="_blank">TemplateFlip</a></div>
                     <ul class="mdl-mini-footer__link-list">
                         <li><a href="#">Privacy & Terms</a></li>
+                        <li><a href="#"><img src="{{ asset("partner/bkkbn45.jpg") }}" title="BKKbN"></a></li>
+                        <li><a href="#"><img src="{{ asset("partner/unfpa40.jpg") }}" title="UNFPA"></a></li>
+                        <li><a href="#"><img src="{{ asset("partner/canada40.jpg") }}" title="CANADA"></a></li>
+                        <li><a href="#"><img src="{{ asset("partner/pkbi40.jpg") }}" title="PKBI"></a></li>
                     </ul>
             </div>
         </footer>

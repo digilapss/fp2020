@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Partner;
 use App\Group;
 use App\Member;
+use App\Chair;
 use App\Docugroup;
 use App\Uevent;
 use App\Intro;
@@ -76,13 +77,12 @@ class FrontendController extends Controller
 	{
 		$group = Group::find($group_id);
 		$members = Member::where('group_id', '=', $group_id)->get();
+		$chairs = Chair::where('group_id', '=', $group_id)->get();
 		$docugroups = Docugroup::where('group_id', '=', $group_id)->orderBy('date', 'desc')->get();
 
 
 		return view('frontend.group',
-					compact('group', 'members', 'docugroups'
-							)
-				);
+					compact('group', 'members', 'docugroups', 'chairs'));
 	}
 
 	public function getEvent()
@@ -94,9 +94,9 @@ class FrontendController extends Controller
 	public function getNews()
 	{
 		$news = News::orderBy('date', 'desc')->paginate(5);
-		foreach ($news as $new) {
-			$new->body = $this->shortenText($new->body, 30);
-		}
+// 		foreach ($news as $new) {
+// 			$new->body = $this->shortenText($new->body, 30);
+// 		}
 		return view('frontend.news', compact('news'));
 	}
 
@@ -126,7 +126,8 @@ class FrontendController extends Controller
 
 	public function getFocal()
 	{
-		return view('frontend.focal');
+		$sixs		= Partner::where('catpart_id', '=', 6)->get();
+		return view('frontend.focal', compact('sixs'));
 	}
 	
 	private function shortenText($text, $words_count)
@@ -137,6 +138,20 @@ class FrontendController extends Controller
 			$text = substr($text, 0, $pos[$words_count]) . '...';
 		}
 		return $text;
+	}
+
+	public function postLogin(Request $request)
+	{
+		$this->validate($request, [
+			'email' => 'required|email',
+			'password' => 'required'
+		]);
+
+		
+		if(!Auth::attempt(['email' => $request['email'], 'password' => $request['password']])){
+			return redirect()->back()->with(['fail' => 'Could not log you in']);
+		}
+		return redirect()->route('frontend.document');
 	}
 
 }

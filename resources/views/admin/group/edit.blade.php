@@ -1,5 +1,12 @@
 @extends('layouts.admin-master')
 
+@section('head')
+  <link rel="stylesheet" href="{{ asset('global/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('global/css/bootstrap-extend.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/site.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('global/vendor/summernote/summernote.css') }}">
+@endsection
+
 @section('content')
 	<script src="//cloud.tinymce.com/stable/tinymce.min.js"></script>
 	<div class="row">
@@ -24,7 +31,7 @@
 					          <label class="control-label">Narrative</label>
 					        </div>
 					        <div class="col-md-10">
-					          <textarea class="form-control" id="narrative" name="narrative" rows="10">{{ Request::old('narrative') ? Request::old('narrative') : isset($groups) ? $groups->narrative : ''}}</textarea>
+					          <textarea class="form-control" id="summernote" data-plugin="summernote" name="narrative" rows="10">{{ Request::old('narrative') ? Request::old('narrative') : isset($groups) ? $groups->narrative : ''}}</textarea>
 					        </div>
 					    </div>
 					  
@@ -49,6 +56,43 @@
 		</div>
 	</div>
 @endsection
+@section('footer')
+  <script src="{{ asset('global/vendor/breakpoints/breakpoints.js') }}"></script>
+  <script src="{{ asset('global/vendor/babel-external-helpers/babel-external-helpers.js') }}"></script>
+  <script src="{{ asset('global/vendor/jquery/jquery.js') }}"></script>
+  <script src="{{ asset('global/vendor/tether/tether.js') }}"></script>
+  <script src="{{ asset('global/vendor/bootstrap/bootstrap.js') }}"></script>
+  
+ 
+  <script src="{{ asset('global/vendor/asscrollable/jquery-asScrollable.js') }}"></script>
+  <script src="{{ asset('global/vendor/ashoverscroll/jquery-asHoverScroll.js') }}"></script>
+  <!-- Plugins -->
+  <script src="{{ asset('global/vendor/switchery/switchery.min.js') }}"></script>
+  <script src="{{ asset('global/vendor/intro-js/intro.js') }}"></script>
+  <script src="{{ asset('global/vendor/screenfull/screenfull.js') }}"></script>
+  <script src="{{ asset('global/vendor/slidepanel/jquery-slidePanel.js') }}"></script>
+  <script src="{{ asset('global/vendor/summernote/summernote.min.js') }}"></script>
+  <!-- Scripts -->
+  <script src="{{ asset('global/js/State.js') }}"></script>
+  <script src="{{ asset('global/js/Component.js') }}"></script>
+  <script src="{{ asset('global/js/Plugin.js') }}"></script>
+  <script src="{{ asset('global/js/Base.js') }}"></script>
+  <script src="{{ asset('global/js/Config.js') }}"></script>
+  <script src="{{ asset('assets/js/Section/Menubar.js') }}"></script>
+  <script src="{{ asset('assets/js/Section/GridMenu.js') }}"></script>
+  <script src="{{ asset('assets/js/Section/Sidebar.js') }}"></script>
+  <script src="{{ asset('assets/js/Section/PageAside.js') }}"></script>
+  <script src="{{ asset('assets/js/Plugin/menu.js') }}"></script>
+  <script src="{{ asset('global/js/config/colors.js') }}"></script>
+  <script src="{{ asset('assets/js/config/tour.js') }}"></script>
+ 
+  <!-- Page -->
+  <script src="{{ asset('assets/js/Site.js') }}"></script>
+  <script src="{{ asset('global/js/Plugin/asscrollable.js') }}"></script>
+  <script src="{{ asset('global/js/Plugin/slidepanel.js') }}"></script>
+  <script src="{{ asset('global/js/Plugin/switchery.js') }}"></script>
+  <script src="{{ asset('global/js/Plugin/summernote.js') }}"></script>
+  <script src="{{ asset('assets/examples/js/forms/editor-summernote.js') }}"></script>
 
 @section('script')
 	<script type="text/javascript">

@@ -30,26 +30,21 @@ class DocumentController extends Controller
 			'category_id' 	=> 'required'
 		]);
 
+        $publicFolder = 'documents/';
+        $destinationDir = "/home/fpindone/public_html/documents/";
+
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $filename = time() . '-' . $file->getClientOriginalName();
+            $file->move($destinationDir, $filename);
+        }
+
 		$document = new Document();
 		$document->name = $request['name'];
 		$document->date = $request['date'];
 		$document->description = $request['description'];
 		$document->category_id = $request['category_id'];
-
-		$document->save();
-
-		if($file = $request->hasFile('file')) {
-            
-            $file = $request->file('file') ;
-            
-
-            $fileName = $document->id;
-            $extension = $file->getClientOriginalExtension();
-
-            $destinationPath = public_path().'/documents/' ;
-            $file->move($destinationPath,$fileName.'.'.$extension);
-            $document->file = $fileName.'.'.$extension ;
-        }
+		$document->file     = ($request->file) ? $publicFolder . $filename : null;
 
 		$document->save();
 
@@ -74,26 +69,22 @@ class DocumentController extends Controller
 			'category_id' 	=> 'required'
 		]);
 
+        $publicFolder = 'documents/';
+        $destinationDir = "/home/fpindone/public_html/documents/";
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $filename = time() . '-' . $file->getClientOriginalName();
+            $file->move($destinationDir, $filename);
+        }
+
 		$document = Document::find($request['document_id']);
 		$document->name = $request['name'];
 		$document->date = $request['date'];
 		$document->description = $request['description'];
 		$document->category_id = $request['category_id'];
+		$document->file   = ($request->file) ? $publicFolder . $filename : $document->file;
 
-						
-		if($file = $request->hasFile('file')) {
-            
-            $file = $request->file('file') ;
-            
-            $fileName = $request['id'];
-            $extension = $file->getClientOriginalExtension();
-
-            $destinationPath = public_path().'/documents/' ;
-            $file->move($destinationPath,$fileName.'.'.$extension);
-            $document->file = $fileName.'.'.$extension ;
-        }
-
-		$document->update();
+		$document->save();
 
 		return redirect()->route('admin.document.index')->with(['success' => 'Document succesfully updated']); 
 	}

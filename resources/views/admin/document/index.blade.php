@@ -54,7 +54,7 @@
 									<td>{{ $document->category->name }}</td>
 									<td>{{ $document->description }}</td>
 									<td>{{ $document->body }}
-										<a href="{{ asset("documents/$document->file") }}" class="btn btn-xs btn-success">
+										<a href="{{ asset("$document->file") }}" class="btn btn-xs btn-success">
 											Download
 										</a>
 									</td>

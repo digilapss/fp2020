@@ -22,6 +22,7 @@ class NewsController extends Controller
 
 	public function postCreate(Request $request)
 	{
+
 		$this->validate($request, [
 			'title' => 'required|max:120|unique:catparts',
 			'body'	=> 'required'

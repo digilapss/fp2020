@@ -2,8 +2,7 @@
 
 @section('content')
 
-
-
+<link href="{{ URL::to('assets/css/custom.css') }}" rel="stylesheet">
 <section class="section--center mdl-grid site-max-width">
   <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone  mdl-shadow--4dp">
     <div class="mdl-card__title">
@@ -11,10 +10,10 @@
     </div>
     <div class="mdl-card__supporting-text">
       <center>  
-        <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" id="tab1">Strategy</a>
-        <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" id="tab2">Reports</a>
-        <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" id="tab3">Power Points</a>
-        <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" id="tab4">TORs & MoM</a>
+        <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent document-us-btn" id="tab1">Strategy</a>
+        <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent document-us-btn" id="tab2">Reports</a>
+        <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent document-us-btn" id="tab3">Power Points</a>
+        <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent document-us-btn" id="tab4">TORs & MoM</a>
       </center>
     </div>
 
@@ -32,7 +31,7 @@
             <table>
               <tr>
                 <td width="90%">[{{ $strategy->date }}] {{ $strategy->name }}</td>
-                <td width="10%"><a class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{{ asset("documents/$strategy->file") }}" download="{{ $strategy->name }}">Download</a></td>
+                <td width="10%"><a class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{{ asset("$strategy->file") }}" download="{{ $strategy->file }}">Download</a></td>
               </tr>
             </table>
           </div>
@@ -54,7 +53,7 @@
             <table>
               <tr>
                 <td width="90%">[{{ $report->date }}] {{ $report->name }}</td>
-                <td width="10%"><a class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{{ asset("documents/$report->file") }}" download="{{ $report->name }}">Download</a></td>
+                <td width="10%"><a class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{{ asset("$report->file") }}" download="{{ $report->file }}">Download</a></td>
               </tr>
             </table>
           </div>
@@ -76,7 +75,7 @@
             <table>
               <tr>
                 <td width="90%">[{{ $ppt->date }}] {{ $ppt->name }}</td>
-                <td width="10%"><a class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{{ asset("documents/$ppt->file") }}" download="{{ $ppt->name }}">Download</a></td>
+                <td width="10%"><a class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{{ asset("$ppt->file") }}" download="{{ $ppt->file }}">Download</a></td>
               </tr>
             </table>
           </div>
@@ -98,7 +97,7 @@
             <table>
               <tr>
                 <td width="90%">[{{ $tor->date }}] {{ $tor->name }}</td>
-                <td width="10%"><a class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{{ asset("documents/$tor->file") }}" download="{{ $tor->name }}">Download</a></td>
+                <td width="10%"><a class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{{ asset("$tor->file") }}" download="{{ $tor->file }}">Download</a></td>
               </tr>
             </table>
           </div>
@@ -108,7 +107,14 @@
 </section>
 
 
-
+  <script>
+    $(document).ready(function(){
+      $('.document-us-btn').click(function(){
+        $('.document-us-btn').removeClass('active');
+        $(this).addClass('active');
+      });
+    });
+  </script>
   <script>
     $(document).ready(function(){
       $("#tabtab2").hide();

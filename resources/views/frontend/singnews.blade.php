@@ -14,7 +14,7 @@
 	              	<div class="mdl-cell mdl-cell--12-col">
 	              		<div class="mdl-cell mdl-cell--10-col mdl-card__supporting-text no-padding ">
 	              			<p>{{ $news->date }}</p>
-	    					<p>{{ $news->body }}</p>
+	    					<p>{!! $news->body !!}</p>
 	    					<br>
 	    				</div>
 					</div>

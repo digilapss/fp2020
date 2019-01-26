@@ -112,6 +112,38 @@ Route::group([
 	]);
 	//end Category Partner
 
+	//partner Country
+	Route::get('/partnerCountry',[
+		'uses' 	=> 'PartnerCountryController@getIndex',
+		'as' 	=> 'admin.partnerContry.index'
+	]);
+
+	Route::get('/partnerCountry/create', [
+		'uses' 	=> 'PartnerCountryController@getCreate',
+		'as' 	=> 'admin.partnerContry.create'
+	]);
+
+	Route::post('/partnerCountry/create', [
+		'uses' 	=> 'PartnerCountryController@postCreate',
+		'as' 	=> 'admin.partnerContry.post.create'
+	]);
+
+	Route::get('/partnerCountry/edit/{partner_id}',[
+		'uses' 	=> 'PartnerCountryController@getUpdate',
+		'as' 	=> 'admin.partnerContry.edit'
+	]);
+
+	Route::post('/partnerCountry/edit/update',[
+		'uses' 	=> 'PartnerCountryController@postUpdate',
+		'as' 	=> 'admin.partnerContry.update'
+	]);
+	
+	Route::get('/partnerCountry/delete/{partner_id}', [
+		'uses'	=> 'PartnerCountryController@getDelete',
+		'as' 	=> 'admin.partnerContry.delete'
+	]);
+	//partner Country Route
+
 	//Partner Route
 	Route::get('/partner',[
 		'uses' 	=> 'PartnerController@getIndex',
@@ -407,4 +439,32 @@ Route::group([
 		'as' 	=> 'admin.profile.update'
 	]);
 	//EndIntro
+
+	//chair Route
+	Route::get('/group/chair/create/{group_id}', [
+		'uses' 	=> 'ChairController@getCreate',
+		'as' 	=> 'admin.chair.create'
+	]);
+
+	Route::post('/group/chair/create', [
+		'uses' 	=> 'ChairController@postCreate',
+		'as' 	=> 'admin.chair.post.create'
+	]);
+
+	Route::get('/group/chair/edit/{chair_id}',[
+		'uses' 	=> 'ChairController@getUpdate',
+		'as' 	=> 'admin.chair.edit'
+	]);
+
+	Route::post('/group/chair/edit/update',[
+		'uses' 	=> 'ChairController@postUpdate',
+		'as' 	=> 'admin.chair.update'
+	]);
+
+	Route::get('/group/chair/delete/{chair_id}', [
+		'uses' 	=> 'ChairController@getDelete',
+		'as' 	=> 'admin.chair.delete'
+	]);
+	//End chair Route
+    
 });

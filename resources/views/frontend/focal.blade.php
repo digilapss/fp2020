@@ -15,82 +15,41 @@
           <div class="panel">
             <div class="panel-body">
                 <p></p>
-                <p>In Indonesia, the National Population and Family Planning Board (BKKBN) chairs the FP2020 Country Committee together with its co-chairs, the United Nations Population Fund (UNFPA) and the United States Agency for International Development (USAID. Collectively, these three institutions serve as the Country Focal Points for FP2020 and lead the initiative at the country-level.
+                <p>Since 2013, the National Population and Family Planning Board (BKKBN) has chaired the FP2020 Country Committee together with the United Nations Population Fund (UNFPA) and the United States Agency for International Development. In April 2017, USAID formally stepped down as FP2020 Country Committee Co-Chair in Indonesia and its role as Donor Focal Point has been replaced by Global Affairs Canada. 
                 </p>
+                <p>Also in 2017, the FP2020 Focal Point structure was formally expanded to include a Civil Society Organization (CSO) Focal Point in recognition of their key role in advancing family planning at the country level. In Indonesia, the Indonesian Planned Parenthood Association has been selected as the CSO Focal Point. Collectively, these institutions serve as the Country Focal Points for FP2020 and lead the initiative at the country-level.</p>
                 <br>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="form-group col-md-12 col-md-12">
-              <ul class="blocks blocks-100 blocks-xxl-3 blocks-lg-3 blocks-md-2" data-plugin="filterable"
+              <ul class="blocks blocks-100 blocks-xxl-2 blocks-lg-2 blocks-md-2" data-plugin="filterable"
               data-filters="#exampleFilter">
+                @foreach($sixs as $six)
                 <li data-type="object">
                   <div class="card card-shadow">
                     <figure class="card-img-top overlay-hover overlay">
-                      <img class="overlay-figure overlay-scale" src="{{ URL::to("partner/38.jpg") }}"
+                      <img class="overlay-figure overlay-scale" src="{{ URL::to("partner/$six->logo") }}"
                       alt="...">
                       <figcaption class="overlay-panel overlay-background overlay-fade overlay-icon">
-                        <a class="icon wb-search" href="{{ URL::to("partner/38.jpg") }}"></a>
+                        <a class="icon wb-search" href="{{ URL::to("partner/$six->logo") }}"></a>
                       </figcaption>
                     </figure>
                     <div class="card-block">
-                      <h2 class="card-title">BKKBN</h2>
+                      <h5 class="card-title">{{ $six->name }}</h5>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        -
+                        {{ $six->narrative }}
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://www.bkkbn.go.id/">
-                        Website
-                        </a>
-                    </div>
+                      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{{ $six->website }}">
+                         Website
+                      </a>
+                  </div>
                   </div>
                 </li>
-                <li data-type="object">
-                  <div class="card card-shadow">
-                    <figure class="card-img-top overlay-hover overlay">
-                      <img class="overlay-figure overlay-scale" src="{{ URL::to("partner/39.jpg") }}"
-                      alt="...">
-                      <figcaption class="overlay-panel overlay-background overlay-fade overlay-icon">
-                        <a class="icon wb-search" href="{{ URL::to("partner/39.jpg") }}"></a>
-                      </figcaption>
-                    </figure>
-                    <div class="card-block">
-                      <h2 class="card-title">UNFPA</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        -
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="http://indonesia.unfpa.org/">
-                        Website
-                        </a>
-                    </div>
-                  </div>
-                </li>
-                <li data-type="object">
-                  <div class="card card-shadow">
-                    <figure class="card-img-top overlay-hover overlay">
-                      <img class="overlay-figure overlay-scale" src="{{ URL::to("partner/44.jpg") }}"
-                      alt="...">
-                      <figcaption class="overlay-panel overlay-background overlay-fade overlay-icon">
-                        <a class="icon wb-search" href="{{ URL::to("partner/44.jpg") }}"></a>
-                      </figcaption>
-                    </figure>
-                    <div class="card-block">
-                      <h2 class="card-title">USAID</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        -
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://www.usaid.gov/">
-                        Website
-                        </a>
-                    </div>
-                  </div>
-                </li>
+                @endforeach
               </ul>
           </div>
         </div>

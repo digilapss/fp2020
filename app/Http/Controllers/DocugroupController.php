@@ -23,28 +23,22 @@ class DocugroupController extends Controller
 			'file' 			=> 'required'
 		]);
 
-		
+        $publicFolder = 'documents/docugroup/';
+        $destinationDir = "/home/fpindone/public_html/documents/docugroup/";
+        // dd($destinationDir);
+
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $filename = time() . '-' . $file->getClientOriginalName();
+            $file->move($destinationDir, $filename);
+        }		
 
 		$document = new Docugroup();
 		$document->name = $request['name'];
 		$document->date = $request['date'];
 		$document->category = $request['category'];
 		$document->group_id = $request['group_id'];
-
-		$document->save();
-		
-		if($file = $request->hasFile('file')) {
-            
-            $file = $request->file('file') ;
-            
-
-            $fileName = $document->id;
-            $extension = $file->getClientOriginalExtension();
-
-            $destinationPath = public_path().'/documents/docugroup/' ;
-            $file->move($destinationPath,$fileName.'.'.$extension);
-            $document->file = $fileName.'.'.$extension ;
-        }
+		$document->file     = ($request->file) ? $publicFolder . $filename : null;
 
 		$document->save();
 
@@ -63,25 +57,22 @@ class DocugroupController extends Controller
 			'name' 			=> 'required|max:120'
 		]);
 
+        $publicFolder = 'documents/docugroup/';
+        $destinationDir = "/home/fpindone/public_html/documents/docugroup/";
+        
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $filename = time() . '-' . $file->getClientOriginalName();
+            $file->move($destinationDir, $filename);
+        }
+
 		$document = Docugroup::find($request['docugroup_id']);
 		$document->name = $request['name'];
 		$document->date = $request['date'];
+		$document->file   = ($request->file) ? $publicFolder . $filename : $document->file;
 		$document->category = $request['category'];
 
-						
-		if($file = $request->hasFile('file')) {
-            
-            $file = $request->file('file') ;
-            
-            $fileName = $document->id;
-            $extension = $file->getClientOriginalExtension();
-
-            $destinationPath = public_path().'/documents/docugroup/' ;
-            $file->move($destinationPath,$fileName.'.'.$extension);
-            $document->file = $fileName.'.'.$extension ;
-        }
-
-		$document->update();
+		$document->save();
 
 		return redirect()->route('admin.group.view', ['group_id' => $request['group_id']])->with(['success' => 'Document succesfully updated!']); 
 	}

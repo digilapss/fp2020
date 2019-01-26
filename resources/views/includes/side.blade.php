@@ -33,6 +33,7 @@
             <li><a href="{{ route('admin.group.view', ['group_id' => 6]) }}">Data Monitoring and Evaluation</a></li>
             <li class="line"></li>
             <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i>Partner</li>
+            <li><a href="{{ route('admin.partnerContry.index') }}">Country Focal Points</a></li>
             <li><a href="{{ route('admin.partner.index') }}">FP2020 Country Committee</a></li>
             <li class="line"></li>
           </ul>

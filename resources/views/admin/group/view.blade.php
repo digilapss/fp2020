@@ -41,6 +41,35 @@
 		<div class="col-md-6">
 		    <div class="card">
 		        <div class="card-header">
+		       		<a href="{{ route('admin.chair.create', ['group_id' => $groups->id]) }}">
+		        		<button class="btn btn-primary btn-xs">Add Chair</button>
+		        	</a>
+		       	</div>
+		        <div class="card-body">
+		        	Chair
+		        	<ul>
+		        		 @if(count($chairs) == 0)
+					    	<li>No Chair</li>
+						@else
+							@foreach($chairs as $chair)
+								<li>
+									{{ $chair->name }} - {{ $chair->position }} 
+
+									<a href="{{ route('admin.chair.edit', ['chair_id' => $chair->id]) }}">Edit</a>
+									<a href="{{ route('admin.chair.delete', ['chair_id' => $chair->id]) }}">Delete</a>
+
+
+
+								</li>
+							@endforeach
+						@endif
+		        	</ul>
+				</div>
+		    </div>
+		</div>
+		<div class="col-md-6">
+		    <div class="card">
+		        <div class="card-header">
 		       		<a href="{{ route('admin.member.create', ['group_id' => $groups->id]) }}">
 		        		<button class="btn btn-primary btn-xs">Add Members</button>
 		        	</a>
@@ -67,7 +96,8 @@
 				</div>
 		    </div>
 		</div>
-
+	</div>
+	<div class="row">
 		<div class="col-md-6">
 		    <div class="card">
 		        <div class="card-header">

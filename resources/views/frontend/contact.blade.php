@@ -6,7 +6,7 @@
   <div class="mdl-grid site-max-width">
     <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
       <div class="mdl-card__title">
-        <h1 class="mdl-card__title-text">Contact</h1>
+        <h1 class="mdl-card__title-text">Contact Us</h1>
       </div>
       <div class="mdl-card__media">
         <img class="article-image" src="{{ URL::to('src/frontend/img/contact.jpg') }}" border="0" alt="Contact">

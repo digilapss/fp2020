@@ -4,7 +4,7 @@
   <title>Admin Area</title>
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+  @yield('head')
   <link rel="shortcut icon" href="{{ asset('/images/fav.png') }}">
 
   <link rel="stylesheet" href="{{ URL::to('src/backend/assets/css/vendor.css') }}">
@@ -36,8 +36,8 @@
     </div>
 
   </div>
-  
-  <script type="text/javascript" src="{{ URL::to('src/backend/assets/js/vendor.js') }}"></script>
+  @yield('footer') 
+<!--   <script type="text/javascript" src="{{ URL::to('src/backend/assets/js/vendor.js') }}"></script> -->
   <script type="text/javascript" src="{{ URL::to('src/backend/assets/js/app.js') }}"></script>
   <script type="text/javascript" src="{{ URL::to('src/datepicker/js/bootstrap-datepicker.js') }}"></script>
 

@@ -19,7 +19,7 @@
 			    	{{ $new->date }} 
 			    </div>
 			    <div class="mdl-card__supporting-text">
-			      <p>{{ $new->body }}</p>
+			      <p>{!! $new->body !!}</p>
 			    </div>
 			    <div class="mdl-card__actions  mdl-card--border">
                     <a class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{{ route('frontend.news.single', ['news_id' => $new->id]) }}">Read More</a>

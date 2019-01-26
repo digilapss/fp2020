@@ -1,7 +1,7 @@
 @extends('layouts.frontend-master')
 
 @section('content')
-
+<link href="{{ URL::to('assets/css/custom.css') }}" rel="stylesheet">
 			<div class="mdl-grid site-max-width">
               <div class="mdl-cell mdl-cell--12-col mdl-card welcome-card mdl-shadow--4dp portfolio-card">
                 <div class="mdl-card__title">
@@ -9,7 +9,8 @@
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
                   <div class="mdl-card__supporting-text">
-                    <h4><center><b>{{ $intro->narrative }}</b></center></h4>
+
+                    {!! $intro->narrative !!}
                   </div>
                 </div>
               </div>
@@ -23,9 +24,9 @@
               </div>
               <div class="mdl-card__supporting-text">
                 <center>  
-                  <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" id="whoweare">Who We Are</a>
-                  <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" id="workinggroup">Working Groups</a>
-                  <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" id="ourpartner">Our Partners</a>
+                  <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent about-us-btn active" data-type="who-we-are" id="whoweare">Who We Are</a>
+                  <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent about-us-btn" data-type="working-groups" id="workinggroup">Working Groups</a>
+                  <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent about-us-btn" data-type="our-partners" id="ourpartner">Our Partners</a>
                 </center>
               </div>
               <div class="mdl-card__actions  mdl-card--border">
@@ -41,7 +42,7 @@
                             <h2 class="mdl-card__title-text">Global FP2020</h2>
                         </div>
                         <div class="mdl-card__supporting-text">
-                            {{ $globalshort }} 
+                            {!! $globalshort !!} 
                         </div>
                         <div class="mdl-card__actions  mdl-card--border">
                           <center>  
@@ -57,7 +58,7 @@
                             <h2 class="mdl-card__title-text">Indonesia FP2020</h2>
                         </div>
                         <div class="mdl-card__supporting-text">
-                            {{ $indonesiashort }} 
+                            {!! $indonesiashort !!} 
                         </div>
                         <div class="mdl-card__actions  mdl-card--border">
                           <center>  
@@ -92,7 +93,7 @@
                             <img class="article-image" src="{{ URL::to('src/frontend/img/right.png') }}" border="0" alt="">
                         </div>
                         <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">Right and Empowerment</h2>
+                            <h2 class="mdl-card__title-text">Rights and Empowerment</h2>
                         </div>
                         <div class="mdl-card__supporting-text">
                             {{ $rightshort }}
@@ -125,13 +126,14 @@
                   <section class="section--center mdl-grid site-max-width">
                     <div class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--4dp portfolio-card">
                         <div class="mdl-card__media">
-                            <img class="article-image" src="{{ URL::to('src/frontend/img/portfolio3.jpg') }}" border="0" alt="">
+                            <img class="article-image" src="{{ URL::to('src/frontend/img/profile4.png') }}" border="0" alt="">
                         </div>
                         <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">Focal Points</h2>
+                            <h2 class="mdl-card__title-text">Country Focal Points</h2>
                         </div>
                         <div class="mdl-card__supporting-text">
-                            In Indonesia, the National Population and Family Planning Board (BKKBN) chairs the FP2020 Country Committee together with its co-chairs, the United Nations Population Fund (UNFPA) and the United States Agency for International Development (USAID. Collectively, these three institutions serve as the Country Focal Points for FP2020 and lead the initiative at the country-level. 
+                            Since 2013, the National Population and Family Planning Board (BKKBN) has chaired the FP2020 Country Committee together with the United Nations Population Fund (UNFPA) and the United States Agency for International Development. In April 2017, USAID formally stepped down as FP2020 Country Committee Co-Chair in Indonesia and its role as Donor Focal Point has been replaced by Global Affairs Canada.
+                            
                         </div>
                         <div class="mdl-card__actions  mdl-card--border">
                           <center>  
@@ -141,7 +143,7 @@
                     </div>
                     <div class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--4dp portfolio-card">
                         <div class="mdl-card__media">
-                            <img class="article-image" src="{{ URL::to('src/frontend/img/portfolio3.jpg') }}" border="0" alt="">
+                            <img class="article-image" src="{{ URL::to('src/frontend/img/profil5.jpeg') }}" border="0" alt="">
                         </div>
                         <div class="mdl-card__title">
                             <h2 class="mdl-card__title-text">FP2020 Country Committee</h2>
@@ -168,48 +170,22 @@
               <div class="mdl-card__title" style="color:rgb(255, 255, 255); background:#3e50b4;">
                   <h2 class="mdl-card__title-text">DATA</h2>
               </div>
-              <div class="mdl-card__supporting-text ">
-                <center>
-                  <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" id="geninfo">General Info</a>
-                  <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" id="coreindi">FP2020 Core Indicator</a>
-                  <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" id="province">Data By Province</a>
-                </center>
-              </div>
+
               <div class="mdl-card__actions  mdl-card--border">
                   <div id="gen" class="mdl-cell mdl-cell--12-col mdl-card portfolio-card">
                     <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text">General Info</h2>
                     </div>
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="{{ URL::to('src/frontend/img/geninfo.png') }}" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                      <a class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{{ URL::to('src/frontend/img/geninfo.png') }}" target="_blank">Download</a>
-                    </div>
-                  </div>
-
-                  <div id="core" class="mdl-cell mdl-cell--12-col mdl-card portfolio-card">
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">FP2020 Core Indicator</h2>
-                    </div>
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="{{ URL::to('src/frontend/img/core.png') }}" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                      <a class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{{ URL::to('src/frontend/document/core.pdf') }}" target="_blank">Download</a>
-                    </div>
-                  </div>
-
-                  <div id="prov" class="mdl-cell mdl-cell--12-col mdl-card portfolio-card">
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">By Province</h2>
-                    </div>
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="{{ URL::to('src/frontend/img/portfolio3.jpg') }}" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                      <a class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="#" target="_blank">Download</a>
-                    </div>
+                      <div class="menu-data">
+                        Progress towards achieving the goals of the global FP2020 initiative is monitored through the Track20 initiative and implemented by Avenir Health. 
+                       <br/>
+                          To learn more about the <span style="font-weight: bold;">Track20 Initiative</span>, please click <a href="http://www.track20.org/pages/about/">here</a>. 
+                        <br>
+                          To learn more about the <span style="font-weight: bold;">FP2020 Core Indicators</span>, please click <a href="http://www.track20.org/pages/data/indicators">here</a>.  
+                        <br>
+                          To learn more about Indonesia’s <span style="font-weight: bold;">progress in family planning</span>, please click <a href="http://www.track20.org/pages/countries/all-countries/indonesia">here</a>.
+                        <br/><br/>
+                      </div>
                   </div>
               </div>
             </div>
@@ -232,8 +208,8 @@
                             
                           <ul>
                             <li><a href="{{ asset("documents/commitment.pdf") }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent">2012 Commitment</a></li>
-                            <li><a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent">2016 Update Commitment</a></li>
-                            <li><a href="{{ asset("documents/action.pdf") }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent">Country Action Plan</a></li>
+                            <li><a href="{{ asset("documents/FP2020_2016_Annual_Commitment_Update_Questionnaire-Indonesia_DLC.pdf") }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent">2016 COMMITMENT UPDATE</a></li>
+                            <li><a href="{{ asset("documents/action.pdf") }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent">2016-2017 FP2020 COUNTRY ACTION</a></li>
                           </ul>   
 
                         </div>
@@ -282,7 +258,7 @@
                             <i class="material-icons mdl-list__item-avatar">layers</i>
                             <span>{{ $new->title }}</span>
                             <span class="mdl-list__item-text-body">
-                            <span>{{ $new->body }}</span> 
+                            <span>{!! $new->body !!}</span> 
                               <a href="{{ route('frontend.news.single', ['news_id' => $new->id]) }}">Read More</a>
                             </span>
                           </span>
@@ -295,7 +271,7 @@
                 </div>
                 <div class="demo-card-event mdl-cell mdl-card mdl-shadow--4dp event-card portfolio-card">
                   <div class="mdl-card__title mdl-card--expand">
-                    <h4>
+                    <h4 class="event-h4">
                        EVENTS:<br>
                       @if(count($uevents) == 0)
                         No upcoming event
@@ -342,11 +318,6 @@
                       $("#prov").show();
                   });
                   
-              });
-            </script>
-
-            <script>
-              $(document).ready(function(){
                   $("#working").hide();
                   $("#our").hide();
                   
@@ -368,6 +339,12 @@
                       $("#our").show();
                   });
                   
+                  $('.about-us-btn').click(function(){
+                    $('.about-us-btn').removeClass('active');
+                    $(this).addClass('active');
+                    localStorage.setItem("aboutUs", $(this).data('type'));
+                  });
+                  $('[data-type="' + localStorage.getItem("aboutUs") + '"]').click();
               });
             </script>
 

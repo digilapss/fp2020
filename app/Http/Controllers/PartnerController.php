@@ -11,13 +11,15 @@ class PartnerController extends Controller
 
 	public function getIndex()
 	{
-		$partners = Partner::all();
+		$partners = Partner::where('catpart_id','!=', 7)->get();
+		
 		return view('admin.partner.index', ['partners' => $partners]);
 	}
 
 	public function getCreate()
 	{
-		$catparts = Catpart::all();
+		$catparts = Catpart::where('id','!=', 7)->get();
+		
 		return view('admin.partner.create', ['catparts' => $catparts]);
 	}
 
@@ -43,7 +45,7 @@ class PartnerController extends Controller
             $fileName = $partners->id;
             $extension = $file->getClientOriginalExtension();
 
-            $destinationPath = public_path().'/partner/' ;
+            $destinationPath = "/home/fpindone/public_html/partner/";
             $file->move($destinationPath,$fileName.'.'.$extension);
             $partners->logo = $fileName.'.'.$extension ;
         }
@@ -84,7 +86,7 @@ class PartnerController extends Controller
             $fileName = $request['partner_id'];
             $extension = $file->getClientOriginalExtension();
 
-            $destinationPath = public_path().'/partner/' ;
+            $destinationPath = $destinationPath = "/home/fpindone/public_html/partner/";
             $file->move($destinationPath,$fileName.'.'.$extension);
             $partners->logo = $fileName.'.'.$extension ;
         }

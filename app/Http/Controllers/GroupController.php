@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Group;
 use App\Member;
 use App\Docugroup;
+use App\Chair;
 
 class GroupController extends Controller
 {
@@ -14,9 +15,10 @@ class GroupController extends Controller
 	{
 		$groups = Group::find($group_id);
 		$members = Member::where('group_id', '=', $group_id)->orderBy('name', 'Asc')->get();
+		$chairs = Chair::where('group_id', '=', $group_id)->orderBy('name', 'Asc')->get();
 		$docugroups = Docugroup:: where('group_id', '=', $group_id)->orderBy('date', 'Desc')->get();
 
-		return view('admin.group.view', compact('groups', 'members', 'docugroups'));
+		return view('admin.group.view', compact('groups', 'members', 'docugroups','chairs'));
 	}
 
 	public function getUpdate($group_id)

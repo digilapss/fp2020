@@ -11,7 +11,7 @@
 		<div class="col-md-12">
 		    <div class="card">
 		        <div class="card-header">
-					<h1>Partners</h1>
+					<h1>FP2020 Country Committee</h1>
 		       	</div>
 		       	<div class="card-body">
 		       		<a href="{{ route('admin.partner.create') }}">
