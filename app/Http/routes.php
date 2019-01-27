@@ -11,7 +11,12 @@ Route::get('/partnerpage',[
 ]);
 
 Route::get('/contact',[
-	'uses'	=> 'FrontendController@getContact',
+	'uses'	=> 'ContactController@getContact',
+	'as'	=> 'frontend.contact'
+]);
+
+Route::post('/contact',[
+	'uses'	=> 'ContactController@sendMail',
 	'as'	=> 'frontend.contact'
 ]);
 

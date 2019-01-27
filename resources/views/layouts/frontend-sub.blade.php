@@ -10,6 +10,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" rel="stylesheet">
     <link href="{{ URL::to('src/frontend/styles/main.css') }}" rel="stylesheet">
+    <link href="{{ URL::to('src/frontend/styles/main2.css') }}" rel="stylesheet">
+    <link href="{{ URL::to('src/frontend/styles/util.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="{{ URL::to('global/css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::to('global/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
         
 	<script src="{{ URL::to('src/frontend/scripts/main.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -71,5 +76,9 @@
         </footer>
       </main>
     <script src="https://code.getmdl.io/1.3.0/material.min.js" defer></script>
+    <script src="{{ URL::to('global/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ URL::to('global/vendor/bootstrap/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::to('src/frontend/scripts/main2.js') }}"></script>
+
   </body>
 </html>
